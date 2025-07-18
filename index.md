@@ -4,7 +4,7 @@ title: Barati - Data platform and AI Engineer
 ---
 
 <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 1em;">
-  <img src="/assets/images/profile.jpg" alt="Barati" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+  <img src="/assets/img/Bharathi.png" alt="Barati" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
   <div>
     <h1>Bharathiraja Muthurajan (Barati)</h1>
     <p><strong>Data platform and AI engineer</strong></p>
@@ -37,4 +37,5 @@ title: Barati - Data platform and AI Engineer
 <ul class="no-bullet">
     <li><a href="https://www.linkedin.com/in/bharathirajam" target="_blank">LinkedIn</a></li>
     <li><a href="https://github.com/brt-rj" target="_blank">GitHub</a></li>
+    <li><a href="/assets/pdf/BM_resume.pdf" target="_blank">Resume &#x2193;</a></li>
 </ul>
