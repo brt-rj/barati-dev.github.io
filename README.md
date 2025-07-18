@@ -1,4 +1,4 @@
-# Barati
+# Bharathiraja Muthurajan (Barati)
 
 **AI Research Engineering Manager | PhD in Human-Centered AI**
 
@@ -6,7 +6,7 @@
 
 ## About Me
 
-I am an experienced AI Research Engineering Manager at Thomson Reuters Labs with over 12 years of experience, including 4+ years in leadership roles. My expertise spans Legal NLP, ML infrastructure, model optimization, and data processing strategies. I hold a Ph.D. in Human-Centered Artificial Intelligence from RWTH Aachen University, focusing on HCI and AI.
+I am AI.
 
 I am proficient in:
 * **Languages:** Python, TypeScript, JavaScript
