@@ -3,8 +3,13 @@ layout: default
 title: Barati - Data platform and AI Engineer
 ---
 
-<h1>Bharathiraja Muthurajan (Barati)</h1>
-<p><strong>Data platform and AI engineer</strong></p>
+<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 1em;">
+  <img src="/assets/images/profile.jpg" alt="Barati" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+  <div>
+    <h1>Bharathiraja Muthurajan (Barati)</h1>
+    <p><strong>Data platform and AI engineer</strong></p>
+  </div>
+</div>
 
 <h2 id="about">About Me</h2>
 <p>I am </p>
