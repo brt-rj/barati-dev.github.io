@@ -2,17 +2,16 @@
 layout: default
 title: Barati - Data platform and AI Engineer
 ---
- 
 <div class="intro-header">
   <img src="/assets/img/Bharathi.png" alt="Barati" class="profile-pic">
   <div class="intro-text">
-    <h1>Bharathiraja Muthurajan (Barati)</h1>
+    <h1>Barati</h1>
     <p><strong>Data platform and AI engineer</strong></p>
   </div>
 </div>
 
 <h2 id="about">About Me</h2>
-<p>I am </p>
+<p>I am Bharathiraja Muthurajan</p>
 <p>I am proficient in:</p>
 <ul class="no-bullet">
     <li><strong>Languages:</strong> Python, C#, SQL</li>
@@ -33,8 +32,8 @@ title: Barati - Data platform and AI Engineer
     <li><strong>Bachelor of Technology in Information Technology</strong><br>VCET</li>
 </ul>
 
-<h2 id="connect">Connect</h2>
 <ul class="no-bullet">
     <li><a href="https://www.linkedin.com/in/bharathirajam" target="_blank">LinkedIn</a></li>
     <li><a href="https://github.com/brt-rj" target="_blank">GitHub</a></li>
+    <li><a href="mailto:barati_m@pm.me">Email Me</a></li>
 </ul>
