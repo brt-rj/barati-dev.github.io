@@ -1,0 +1,8 @@
+---
+layout: default
+title: Resume
+---
+<div class="resume-container">
+  {% capture resume_md %}{% include_relative assets/md/BM_resume.md %}{% endcapture %}
+  {{ resume_md | markdownify }}
+</div>
