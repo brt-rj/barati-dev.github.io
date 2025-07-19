@@ -244,83 +244,89 @@ ul, ol {
   background: $primary-accent;
 }
 
-// Resume Styles
+// Resume Styles (Revised for print-like, clean look)
 $resume-gold: #bfa046;
 $resume-black: #222;
 $resume-gray: #666;
 $resume-lightgray: #f7f7f7;
-$resume-font: 'Segoe UI', 'Arial', sans-serif;
+$resume-font: 'Raleway', Arial, Helvetica, sans-serif;
 
 .resume-container {
   background: #fff;
   color: $resume-black;
   font-family: $resume-font;
-  max-width: 900px;
-  margin: 2em auto;
-  padding: 2.5em 2em 2em 2em;
-  border-radius: 12px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  max-width: 1100px;
+  margin: 2.5em auto 2em auto;
+  padding: 2.5em 2.5em 2em 2.5em;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 .resume-header {
   text-align: left;
   margin-bottom: 0.5em;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 0.5em;
 }
 .resume-name {
-  font-size: 2.7em;
+  font-size: 2.8em;
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.1;
+  margin-bottom: 0.1em;
 }
 .resume-name .last {
   color: $resume-gold;
   font-weight: 700;
 }
 .resume-title {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-style: italic;
   color: $resume-gray;
   margin-bottom: 0.2em;
 }
 .resume-contact {
-  font-size: 0.98em;
+  font-size: 1em;
   color: $resume-gray;
-  margin-bottom: 1.2em;
-  a { color: $resume-gold; text-decoration: none; margin-right: 0.7em; }
-  a:hover { text-decoration: underline; }
+  margin-bottom: 0.5em;
+  a { color: $resume-gray; text-decoration: underline; margin-right: 0.7em; }
+  a:hover { color: $resume-gold; }
 }
 
 .resume-section {
-  margin-top: 2em;
+  margin-top: 2.2em;
   margin-bottom: 1.2em;
 }
 .resume-section-title {
-  font-size: 1.1em;
+  font-size: 1.15em;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  color: $resume-black;
+  letter-spacing: 0.13em;
+  color: $resume-gray;
   text-transform: uppercase;
-  border-bottom: 2.5px solid $resume-gold;
-  display: inline-block;
+  border-bottom: 1.5px solid #bbb;
+  display: block;
   padding-bottom: 0.2em;
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
 }
 
 .resume-main {
   display: flex;
-  gap: 2.5em;
+  gap: 3em;
+  align-items: flex-start;
 }
 .resume-col {
   flex: 1 1 0;
-  min-width: 260px;
+  min-width: 300px;
 }
 
 .resume-subtitle {
-  font-weight: 600;
-  color: $resume-gold;
+  font-weight: 700;
+  color: $resume-black;
   margin-top: 1.1em;
   margin-bottom: 0.3em;
-  font-size: 1.05em;
+  font-size: 1.08em;
+  letter-spacing: 0.02em;
 }
 
 .resume-list {
@@ -331,7 +337,7 @@ $resume-font: 'Segoe UI', 'Arial', sans-serif;
   font-size: 1em;
 }
 .resume-list li {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.35em;
   line-height: 1.5;
 }
 
@@ -343,7 +349,7 @@ $resume-font: 'Segoe UI', 'Arial', sans-serif;
 }
 
 // Responsive for mobile
-@media (max-width: 700px) {
-  .resume-main { flex-direction: column; gap: 0.5em; }
+@media (max-width: 900px) {
+  .resume-main { flex-direction: column; gap: 1.5em; }
   .resume-container { padding: 1em; }
 }
