@@ -1,21 +1,64 @@
 ---
 ---
 
-// Atom Material Theme Dark - Enhanced Version
+// Theme System - Palenight (Dark) and Atom One Light (Light)
 
-// Variables - Authentic Atom Material Dark Colors
-$bg-color: #263238;
-$surface-color: #2E3C43;
-$text-color: #ECEFF1;
-$text-secondary: #B0BEC5;
-$primary-accent: #80CBC4;
-$secondary-accent: #FFB74D;
-$error-color: #FF8A80;
-$success-color: #81C784;
-$warning-color: #FFB74D;
-$info-color: #64B5F6;
-$header-color: #FFFFFF;
-$border-color: #37474F;
+// CSS Custom Properties for Theme Switching
+:root {
+  // Palenight Theme (Dark) - Default
+  --bg-color: #292D3E;
+  --surface-color: #444267;
+  --text-color: #A6ACCD;
+  --text-secondary: #676E95;
+  --primary-accent: #C792EA;
+  --primary-accent-light: #D4A5F0;
+  --secondary-accent: #F78C6C;
+  --error-color: #FF5370;
+  --success-color: #C3E88D;
+  --warning-color: #FFCB6B;
+  --info-color: #89DDFF;
+  --header-color: #FFFFFF;
+  --border-color: #444267;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --profile-shadow: rgba(199, 146, 234, 0.3);
+}
+
+// Light Theme (Atom One Light)
+[data-theme="light"] {
+  --bg-color: #FAFAFA;
+  --surface-color: #FFFFFF;
+  --text-color: #383A42;
+  --text-secondary: #9CA0A4;
+  --primary-accent: #4078F2;
+  --primary-accent-light: #5A8AFF;
+  --secondary-accent: #E45649;
+  --error-color: #E45649;
+  --success-color: #50A14F;
+  --warning-color: #C18401;
+  --info-color: #0184BC;
+  --header-color: #383A42;
+  --border-color: #E1E4E8;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --profile-shadow: rgba(64, 120, 242, 0.3);
+}
+
+// SCSS Variables for compatibility
+$bg-color: var(--bg-color);
+$surface-color: var(--surface-color);
+$text-color: var(--text-color);
+$text-secondary: var(--text-secondary);
+$primary-accent: var(--primary-accent);
+$primary-accent-light: var(--primary-accent-light);
+$secondary-accent: var(--secondary-accent);
+$error-color: var(--error-color);
+$success-color: var(--success-color);
+$warning-color: var(--warning-color);
+$info-color: var(--info-color);
+$header-color: var(--header-color);
+$border-color: var(--border-color);
+$shadow-color: var(--shadow-color);
+$profile-shadow: var(--profile-shadow);
+
 $font-family: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 // Global Styles
@@ -31,6 +74,9 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -39,9 +85,10 @@ body {
     padding: 2em;
     background-color: $surface-color;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px $shadow-color;
     margin-top: 2em;
     margin-bottom: 2em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 // Typography
@@ -50,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 h1 {
@@ -77,8 +125,8 @@ a {
   
   &:hover {
     text-decoration: none;
-    color: lighten($primary-accent, 15%);
-    border-bottom: 1px solid lighten($primary-accent, 15%);
+    color: $primary-accent-light;
+    border-bottom: 1px solid $primary-accent-light;
   }
   
   &:visited {
@@ -90,6 +138,7 @@ a {
 p {
   margin-bottom: 1em;
   color: $text-color;
+  transition: color 0.3s ease;
 }
 
 strong {
@@ -110,6 +159,7 @@ code {
   border-radius: 3px;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 pre {
@@ -118,6 +168,7 @@ pre {
   border-radius: 6px;
   padding: 1em;
   overflow-x: auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   
   code {
     background-color: transparent;
@@ -128,6 +179,7 @@ pre {
 // Lists
 ul, ol {
   color: $text-color;
+  transition: color 0.3s ease;
   
   li {
     margin-bottom: 0.5em;
@@ -144,6 +196,7 @@ ul, ol {
   background-color: $bg-color;
   border-radius: 8px;
   border-left: 4px solid $primary-accent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-pic {
@@ -152,8 +205,8 @@ ul, ol {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid $primary-accent;
-  box-shadow: 0 4px 15px rgba(128, 203, 196, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px $profile-shadow;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: scale(1.05);
@@ -180,6 +233,7 @@ ul, ol {
     border-radius: 8px;
     padding: 1em 1.5em;
     margin-bottom: 2em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .site-nav {
@@ -200,6 +254,31 @@ ul, ol {
         background-color: $primary-accent;
         color: $bg-color;
         text-decoration: none;
+    }
+}
+
+// Theme Toggle Button
+.theme-toggle {
+    background: none;
+    border: 2px solid $primary-accent;
+    color: $primary-accent;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    
+    &:hover {
+        background-color: $primary-accent;
+        color: $bg-color;
+    }
+    
+    .theme-icon {
+        font-size: 1.1em;
     }
 }
 
@@ -244,106 +323,215 @@ ul, ol {
   background: $primary-accent;
 }
 
-// Resume Styles
-$resume-gold: #bfa046;
-$resume-black: #222;
-$resume-gray: #666;
-$resume-lightgray: #f7f7f7;
-$resume-font: 'Segoe UI', 'Arial', sans-serif;
-
-.resume-container {
-  background: #fff;
-  color: $resume-black;
-  font-family: $resume-font;
-  max-width: 900px;
-  margin: 2em auto;
-  padding: 2.5em 2em 2em 2em;
-  border-radius: 12px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+// Resume Styles (Theme-aware)
+/* Basic Reset & Font Import */
+body {
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: $bg-color;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased; /* For smoother text rendering */
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.resume-header {
-  text-align: left;
-  margin-bottom: 0.5em;
-}
-.resume-name {
-  font-size: 2.7em;
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
-}
-.resume-name .last {
-  color: $resume-gold;
-  font-weight: 700;
-}
-.resume-title {
-  font-size: 1.2em;
-  font-style: italic;
-  color: $resume-gray;
-  margin-bottom: 0.2em;
-}
-.resume-contact {
-  font-size: 0.98em;
-  color: $resume-gray;
-  margin-bottom: 1.2em;
-  a { color: $resume-gold; text-decoration: none; margin-right: 0.7em; }
-  a:hover { text-decoration: underline; }
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: $surface-color;
+    padding: 30px;
+    box-shadow: 0 0 15px $shadow-color; /* Theme-aware shadow */
+    border-radius: 8px; /* Rounded corners for the container */
 }
 
-.resume-section {
-  margin-top: 2em;
-  margin-bottom: 1.2em;
-}
-.resume-section-title {
-  font-size: 1.1em;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: $resume-black;
-  text-transform: uppercase;
-  border-bottom: 2.5px solid $resume-gold;
-  display: inline-block;
-  padding-bottom: 0.2em;
-  margin-bottom: 0.7em;
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid $primary-accent; /* Theme-aware accent */
+    padding-bottom: 15px;
 }
 
-.resume-main {
-  display: flex;
-  gap: 2.5em;
-}
-.resume-col {
-  flex: 1 1 0;
-  min-width: 260px;
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    color: $header-color;
+    font-weight: 700; /* Bolder for the name */
 }
 
-.resume-subtitle {
-  font-weight: 600;
-  color: $resume-gold;
-  margin-top: 1.1em;
-  margin-bottom: 0.3em;
-  font-size: 1.05em;
+header .subtitle {
+    font-size: 1.3em;
+    color: $text-secondary;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.resume-list {
-  margin: 0 0 1em 1.2em;
-  padding: 0;
-  list-style: disc inside;
-  color: $resume-black;
-  font-size: 1em;
-}
-.resume-list li {
-  margin-bottom: 0.4em;
-  line-height: 1.5;
+header .contact-info {
+    font-size: 0.95em;
+    color: $text-secondary;
 }
 
-.resume-bold {
-  font-weight: 700;
-}
-.resume-italic {
-  font-style: italic;
+header .contact-info a {
+    color: $primary-accent;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for links */
 }
 
-// Responsive for mobile
-@media (max-width: 700px) {
-  .resume-main { flex-direction: column; gap: 0.5em; }
-  .resume-container { padding: 1em; }
+header .contact-info a:hover {
+    color: $primary-accent-light;
+    text-decoration: underline;
+}
+
+/* Section Headings */
+h2 {
+    color: $primary-accent;
+    border-bottom: 1px solid $border-color; /* Theme-aware border */
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase; /* Uppercase for main sections */
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: $secondary-accent;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+h4 {
+    color: $text-color;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    padding-left: 25px; /* More space for bullet */
+    position: relative;
+    text-align: left; /* Ensure text aligns left */
+}
+
+ul li::before {
+    content: '•';
+    color: $primary-accent;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em; /* Larger bullet */
+    line-height: 1.6; /* Align bullet with text */
+}
+
+/* Professional Summary */
+.professional-summary {
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+/* Two-Column Layout */
+.main-content {
+    display: flex;
+    gap: 40px; /* Increased space between columns */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.left-column {
+    flex: 1; /* Takes 1 part of the available space */
+    min-width: 300px; /* Minimum width for the left column to prevent squishing */
+}
+
+.experience-certifications {
+    flex: 2; /* Takes 2 parts of the available space, making it wider */
+    min-width: 450px; /* Minimum width for the right column */
+}
+
+/* Specific adjustments for Experience list */
+.experience ul li {
+    margin-bottom: 12px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.date-location {
+    font-style: italic;
+    color: $text-secondary;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column; /* Stack columns on tablets and smaller */
+        gap: 20px;
+    }
+
+    .left-column,
+    .experience-certifications {
+        min-width: unset; /* Remove min-width when stacking */
+        width: 100%; /* Take full width */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .subtitle {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header .subtitle {
+        font-size: 1em;
+    }
+
+    header .contact-info {
+        font-size: 0.85em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    ul li {
+        padding-left: 20px;
+    }
 }
