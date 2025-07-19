@@ -36,4 +36,4 @@ title: Barati - Data platform and AI Engineer
     <li><a href="https://www.linkedin.com/in/bharathirajam" target="_blank">LinkedIn</a></li>
     <li><a href="https://github.com/brt-rj" target="_blank">GitHub</a></li>
     <li><a href="mailto:barati_m@pm.me">Email Me</a></li>
-</ul>
+</ul> 
