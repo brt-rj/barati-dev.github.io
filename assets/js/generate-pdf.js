@@ -22,7 +22,7 @@ const path = require('path');
   await page.emulateMediaType('screen');
 
   // Inject CSS directly to ensure styles are applied
-  const css = fs.readFileSync(path.resolve(__dirname, '../../assets/css/style.css'), 'utf8');
+  const css = fs.readFileSync(path.resolve(__dirname, '../../_site/assets/css/style.css'), 'utf8');
   await page.addStyleTag({ content: css });
 
   // Get the bounding box of the .resume-container
