@@ -25,23 +25,17 @@ jobs:
       - name: Install Puppeteer
         run: npm install puppeteer
 
-      - name: Install protobuf-compiler
-        run: sudo apt-get update && sudo apt-get install -y protobuf-compiler
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
 
-      - name: Install ruby-dev
-        run: sudo apt-get update && sudo apt-get install -y ruby-dev
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential libffi-dev ruby-dev protobuf-compiler
 
-      - name: Install libffi-dev for native gems
-        run: sudo apt-get update && sudo apt-get install -y libffi-dev
-
-      - name: Install build tools for native gems
-        run: sudo apt-get update && sudo apt-get install -y build-essential
-
-      - name: Install Bundler and Jekyll
-        run: |
-          gem install bundler --user-install
-          export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
-          bundle install
+      - name: Install project gems
+        run: bundle install
 
       - name: Build Jekyll site
         run: |
