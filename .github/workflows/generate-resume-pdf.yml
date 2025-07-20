@@ -1,4 +1,4 @@
-name: Generate Resume PDF
+name: Build and Deploy Barati.dev
 
 on:
   push:
@@ -6,9 +6,10 @@ on:
       - main
       - master
       - barati.dev-1.0.3.a
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
