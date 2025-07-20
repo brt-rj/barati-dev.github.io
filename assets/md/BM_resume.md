@@ -35,43 +35,60 @@ Certified data analyst with more than five years of experience as a researcher i
 
 ## EDUCATION
 
-**IIT MADRAS** | Apr 2022 | Chennai, India  
-*GRADUATE STUDIES*  
-Research in traffic state estimation and sensor development  
-Data Science, Image processing, Real-time traffic data
+<div class="resume-education-item">
+<div class="institution">IIT MADRAS</div>
+<div class="degree">GRADUATE STUDIES</div>
+<div class="details">Research in traffic state estimation and sensor development<br>
+Data Science, Image processing, Real-time traffic data</div>
+<div class="duration">Apr 2022 | Chennai, India</div>
+</div>
 
-**FH TECHNIKUM WIEN** | Jul 2016 | Vienna, Austria  
-*MASTER OF SCIENCE*  
-Intelligent Transportation Systems, Data Analysis, Sensor development
+<div class="resume-education-item">
+<div class="institution">FH TECHNIKUM WIEN</div>
+<div class="degree">MASTER OF SCIENCE</div>
+<div class="details">Intelligent Transportation Systems, Data Analysis, Sensor development</div>
+<div class="duration">Jul 2016 | Vienna, Austria</div>
+</div>
 
-**UNIVERSITY OF ST ANDREWS** | Nov 2013 | St Andrews, Scotland  
-*PG DIPLOMA*  
-Networks and Distributed Systems, Cloud computing, Programming
+<div class="resume-education-item">
+<div class="institution">UNIVERSITY OF ST ANDREWS</div>
+<div class="degree">PG DIPLOMA</div>
+<div class="details">Networks and Distributed Systems, Cloud computing, Programming</div>
+<div class="duration">Nov 2013 | St Andrews, Scotland</div>
+</div>
 
-**VCET** | Jun 2012 | Madurai, India  
-*BACHELORS IN ENGINEERING*  
-Electronics and communication
+<div class="resume-education-item">
+<div class="institution">VCET</div>
+<div class="degree">BACHELORS IN ENGINEERING</div>
+<div class="details">Electronics and communication</div>
+<div class="duration">Jun 2012 | Madurai, India</div>
+</div>
 
 </div>
 <div class="resume-col">
 
 ## EXPERIENCE
 
-**DATA ANALYST (RESEARCH SCHOLAR)** | IITM | Aug 2016 – Apr 2022 | Chennai, India
-
-* Published 6 peer-reviewed journal articles on the analysis of traffic sensor data using descriptive and predictive analytic tools Tableau, SQL, and Python.
-* Developed 2 traffic scanners using Wi-Fi and LiDAR sensor technology with Linux OS and Python.
-* Designed and developed data analytics pipelines for in-house traffic sensors with batch and stream processing using Spark, Microsoft Azure services, and reporting using Tableau.
-* Migrated previous generation sensor data pipeline consisting of over 400 devices from on-premise to AWS cloud infrastructure improving sensor operation reliability by more than 15%.
-* Operated as the point of contact for 2 industry funded projects, coordinating deliverables across 2 research labs, and 9 scholars with on-time project closure.
-* Managed 8 field technicians in the maintenance of a total of 590+ traffic sensors, provided them with operational dashboards, and created performance incentives. Also provided stakeholder faculties with strategic dashboards for tracking data volume and sensor performance using SQL and Tableau.
-* Implemented continuous monitoring of lab developed sensors using operational dashboards and reports using Power BI, providing bug fixes and performance upgrades, improving sensor capture performance by 60%.
-* Spearheaded the successful retrieval of 240 transit vehicle location sensors within 6 months and overhauled sensor maintenance procedure.
-* Mentored 4 technical project staff and undergraduate researchers on traffic data analysis projects and won a best paper award in collaboration.
-* Devised 2 image processing software for vehicle trajectory tracking and counting using Python, published the analysis in 2 peer-reviewed journals.
-* Orchestrated international data collection project in-person in India and United States in collaboration with Iowa State University.
-* Collected 30 days of naturalistic pedestrian behavior data in collaboration with Austrian road safety board, used in Vienna road safety evaluation.
-* Completed coursework and comprehensive exam toward a doctoral program.
+<div class="resume-experience-item">
+<div class="position">DATA ANALYST (RESEARCH SCHOLAR)</div>
+<div class="company">IITM</div>
+<div class="duration">Aug 2016 – Apr 2022 | Chennai, India</div>
+<ul class="resume-list">
+<li>Published 6 peer-reviewed journal articles on the analysis of traffic sensor data using descriptive and predictive analytic tools Tableau, SQL, and Python.</li>
+<li>Developed 2 traffic scanners using Wi-Fi and LiDAR sensor technology with Linux OS and Python.</li>
+<li>Designed and developed data analytics pipelines for in-house traffic sensors with batch and stream processing using Spark, Microsoft Azure services, and reporting using Tableau.</li>
+<li>Migrated previous generation sensor data pipeline consisting of over 400 devices from on-premise to AWS cloud infrastructure improving sensor operation reliability by more than 15%.</li>
+<li>Operated as the point of contact for 2 industry funded projects, coordinating deliverables across 2 research labs, and 9 scholars with on-time project closure.</li>
+<li>Managed 8 field technicians in the maintenance of a total of 590+ traffic sensors, provided them with operational dashboards, and created performance incentives. Also provided stakeholder faculties with strategic dashboards for tracking data volume and sensor performance using SQL and Tableau.</li>
+<li>Implemented continuous monitoring of lab developed sensors using operational dashboards and reports using Power BI, providing bug fixes and performance upgrades, improving sensor capture performance by 60%.</li>
+<li>Spearheaded the successful retrieval of 240 transit vehicle location sensors within 6 months and overhauled sensor maintenance procedure.</li>
+<li>Mentored 4 technical project staff and undergraduate researchers on traffic data analysis projects and won a best paper award in collaboration.</li>
+<li>Devised 2 image processing software for vehicle trajectory tracking and counting using Python, published the analysis in 2 peer-reviewed journals.</li>
+<li>Orchestrated international data collection project in-person in India and United States in collaboration with Iowa State University.</li>
+<li>Collected 30 days of naturalistic pedestrian behavior data in collaboration with Austrian road safety board, used in Vienna road safety evaluation.</li>
+<li>Completed coursework and comprehensive exam toward a doctoral program.</li>
+</ul>
+</div>
 
 ## CERTIFICATIONS
 
