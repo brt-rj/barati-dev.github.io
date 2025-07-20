@@ -17,18 +17,13 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set up Pandoc
-        run: |
-          if ! command -v pandoc > /dev/null; then
-            sudo apt-get update
-            sudo apt-get install -y pandoc texlive-xetex
-          else
-            echo "Pandoc is already installed"
-          fi
-
       - name: Generate PDF from Markdown
         run: |
-          pandoc assets/md/BM_resume.md -o assets/BM_resume.pdf --pdf-engine=xelatex
+          export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
+          bundle exec jekyll serve --detach
+
+      - name: Generate PDF with Puppeteer
+        run: node assets/js/generate-pdf.js
 
       - name: Set up Git user
         run: |
