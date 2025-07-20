@@ -18,7 +18,7 @@ const path = require('path');
   await page.goto('file://' + filePath, { waitUntil: 'networkidle0' });
 
   await page.pdf({
-    path: '../../assets/BM_resume.pdf',
+    path: 'assets/BM_resume.pdf',
     format: 'A4',
     printBackground: true
   });
