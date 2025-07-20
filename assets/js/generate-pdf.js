@@ -3,7 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: 'new' });
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
   const page = await browser.newPage();
 
   // Serve the built site locally or open the file directly
