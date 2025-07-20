@@ -17,7 +17,13 @@ jobs:
           persist-credentials: false
 
       - name: Set up Pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-xetex
+        run: |
+          if ! command -v pandoc > /dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y pandoc texlive-xetex
+          else
+            echo "Pandoc is already installed"
+          fi
 
       - name: Generate PDF from Markdown
         run: |
