@@ -39,7 +39,7 @@ jobs:
         run: npm install -g md-to-pdf
 
       - name: Generate PDF from Markdown
-        run: md-to-pdf assets/BM_resume.md assets/BM_resume.pdf --stylesheet assets/css/style.css
+        run: md-to-pdf assets/BM_resume.md assets/BM_resume.pdf --stylesheet assets/css/style.css --launch-options.args='["--no-sandbox"]'
 
       - name: Set up Git user
         run: |

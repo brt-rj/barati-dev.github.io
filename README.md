@@ -10,7 +10,7 @@ A personal portfolio and resume site for Bharathiraja Muthurajan, Data Platform 
   - Viewable as a web page (`resume.html`).
   - Downloadable as a PDF (`assets/BM_resume.pdf`), auto-generated from Markdown.
 - **Automated PDF Generation**: 
-  - Uses Jekyll to build the site and Puppeteer to generate a PDF from the rendered HTML.
+  - Uses Jekyll to build the site and md-to-pdf to generate a PDF from the Markdown resume.
   - Managed via GitHub Actions workflow (`.github/workflows/generate-barati-dev.yml`).
 
 ## Directory Structure
@@ -25,7 +25,7 @@ A personal portfolio and resume site for Bharathiraja Muthurajan, Data Platform 
 │   ├── BM_resume.pdf          # Auto-generated PDF resume
 │   ├── css/style.scss         # Main stylesheet
 │   ├── img/Bharathi.png       # Profile image
-│   └── js/generate-pdf.js     # Puppeteer script for PDF generation
+│   └── js/generate-pdf.js     # Puppeteer script for PDF generation (legacy)
 ├── content/
 │   ├── projects.md            # Project list
 │   ├── project-*.md           # Individual project details
@@ -36,19 +36,11 @@ A personal portfolio and resume site for Bharathiraja Muthurajan, Data Platform 
 └── CNAME                      # Custom domain config
 ```
 
-## Resume PDF Generation
-
-- The resume is written in Markdown (`assets/BM_resume.md`).
-- On push, the GitHub Actions workflow:
-  1. Builds the site with Jekyll.
-  2. Runs `assets/js/generate-pdf.js` (Puppeteer) to create `assets/BM_resume.pdf` from the rendered HTML.
-  3. Commits the updated PDF back to the repository.
-
 ## Local Development
 
 1. **Install dependencies**:
    - Ruby, Bundler, Jekyll for site generation.
-   - Node.js for Puppeteer (if you want to generate the PDF locally).
+   - Node.js for md-to-pdf (if you want to generate the PDF locally).
 
 2. **Serve the site locally**:
    ```sh
@@ -58,8 +50,8 @@ A personal portfolio and resume site for Bharathiraja Muthurajan, Data Platform 
 
 3. **Generate PDF locally** (optional):
    ```sh
-   npm install puppeteer
-   node assets/js/generate-pdf.js
+   npm install -g md-to-pdf
+   md-to-pdf assets/BM_resume.md assets/BM_resume.pdf --stylesheet assets/css/style.css
    ```
 
 ## Deployment
