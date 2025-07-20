@@ -244,171 +244,215 @@ ul, ol {
   background: $primary-accent;
 }
 
-// Resume Styles (Professional two-column layout with Raleway)
-$resume-gold: #bfa046;
-$resume-black: #222;
-$resume-gray: #666;
-$resume-lightgray: #f7f7f7;
-$resume-font: 'Raleway', Arial, Helvetica, sans-serif;
-
-.resume-container {
-  background: #fff;
-  color: $resume-black;
-  font-family: $resume-font;
-  max-width: 1200px;
-  margin: 2em auto;
-  padding: 2.5em 3em;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-  line-height: 1.4;
+// Resume Styles (New professional layout)
+/* Basic Reset & Font Import */
+body {
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    -webkit-font-smoothing: antialiased; /* For smoother text rendering */
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.resume-header {
-  text-align: left;
-  margin-bottom: 2em;
-  border-bottom: 2px solid $resume-gold;
-  padding-bottom: 1em;
-}
-.resume-name {
-  font-size: 3.5em;
-  font-weight: 300;
-  letter-spacing: 0.03em;
-  line-height: 1.1;
-  margin-bottom: 0.2em;
-  color: $resume-black;
-}
-.resume-name .last {
-  color: $resume-gold;
-  font-weight: 700;
-}
-.resume-title {
-  font-size: 1.5em;
-  font-style: italic;
-  color: $resume-gray;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-}
-.resume-contact {
-  font-size: 0.95em;
-  color: $resume-gray;
-  margin-bottom: 0.5em;
-  line-height: 1.5;
-  a { 
-    color: $resume-gray; 
-    text-decoration: none; 
-    margin-right: 1em; 
-  }
-  a:hover { 
-    color: $resume-gold; 
-    text-decoration: underline;
-  }
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 8px; /* Rounded corners for the container */
 }
 
-.resume-section {
-  margin-top: 2em;
-  margin-bottom: 1.5em;
-}
-.resume-section-title {
-  font-size: 1.3em;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: $resume-black;
-  text-transform: uppercase;
-  border-bottom: 2px solid $resume-gold;
-  display: inline-block;
-  padding-bottom: 0.4em;
-  margin-bottom: 1.5em;
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0; /* Lighter border */
+    padding-bottom: 15px;
 }
 
-.resume-main {
-  display: flex;
-  gap: 4em;
-  align-items: flex-start;
-}
-.resume-col {
-  flex: 1 1 0;
-  min-width: 350px;
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 700; /* Bolder for the name */
 }
 
-.resume-subtitle {
-  font-weight: 700;
-  color: $resume-black;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  font-size: 1.1em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+header .subtitle {
+    font-size: 1.3em;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.resume-list {
-  margin: 0 0 1.5em 1.8em;
-  padding: 0;
-  list-style: disc inside;
-  color: $resume-black;
-  font-size: 1em;
-  line-height: 1.6;
-}
-.resume-list li {
-  margin-bottom: 0.5em;
-  line-height: 1.5;
-}
-
-.resume-bold {
-  font-weight: 700;
-}
-.resume-italic {
-  font-style: italic;
-}
-
-// Education and Experience specific styling
-.resume-education-item {
-  margin-bottom: 1.5em;
-  
-  .institution {
-    font-weight: 700;
-    color: $resume-black;
-    font-size: 1.1em;
-    margin-bottom: 0.2em;
-  }
-  
-  .degree {
-    font-style: italic;
-    color: $resume-gray;
-    margin-bottom: 0.3em;
-  }
-  
-  .details {
-    color: $resume-black;
+header .contact-info {
     font-size: 0.95em;
-  }
+    color: #555;
 }
 
-.resume-experience-item {
-  margin-bottom: 1.5em;
-  
-  .position {
-    font-weight: 700;
-    color: $resume-black;
+header .contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for links */
+}
+
+header .contact-info a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Section Headings */
+h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #dcdcdc; /* Lighter border */
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase; /* Uppercase for main sections */
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+h4 {
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-size: 1.1em;
-    margin-bottom: 0.2em;
-  }
-  
-  .company {
-    color: $resume-gray;
-    margin-bottom: 0.3em;
-  }
-  
-  .duration {
-    color: $resume-gray;
-    font-style: italic;
-    margin-bottom: 0.5em;
-  }
+    font-weight: 500;
 }
 
-// Responsive for mobile
-@media (max-width: 1000px) {
-  .resume-main { flex-direction: column; gap: 2.5em; }
-  .resume-container { padding: 2em; }
-  .resume-name { font-size: 3em; }
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    padding-left: 25px; /* More space for bullet */
+    position: relative;
+    text-align: left; /* Ensure text aligns left */
+}
+
+ul li::before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em; /* Larger bullet */
+    line-height: 1.6; /* Align bullet with text */
+}
+
+/* Professional Summary */
+.professional-summary {
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+/* Two-Column Layout */
+.main-content {
+    display: flex;
+    gap: 40px; /* Increased space between columns */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.left-column {
+    flex: 1; /* Takes 1 part of the available space */
+    min-width: 300px; /* Minimum width for the left column to prevent squishing */
+}
+
+.experience-certifications {
+    flex: 2; /* Takes 2 parts of the available space, making it wider */
+    min-width: 450px; /* Minimum width for the right column */
+}
+
+/* Specific adjustments for Experience list */
+.experience ul li {
+    margin-bottom: 12px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.date-location {
+    font-style: italic;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column; /* Stack columns on tablets and smaller */
+        gap: 20px;
+    }
+
+    .left-column,
+    .experience-certifications {
+        min-width: unset; /* Remove min-width when stacking */
+        width: 100%; /* Take full width */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .subtitle {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header .subtitle {
+        font-size: 1em;
+    }
+
+    header .contact-info {
+        font-size: 0.85em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    ul li {
+        padding-left: 20px;
+    }
 }
