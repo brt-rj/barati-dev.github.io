@@ -1,6 +1,7 @@
 ---
 layout: default
 title: My Projects
+permalink: /projects
 ---
 
 <h1>Data Analytics Projects</h1>
