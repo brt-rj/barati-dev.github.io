@@ -16,6 +16,14 @@ const path = require('path');
     process.exit(1);
   }
   await page.goto('file://' + filePath, { waitUntil: 'networkidle0' });
+  await page.waitForSelector('.resume-container');
+
+  // Emulate screen media to use screen CSS
+  await page.emulateMediaType('screen');
+
+  // Inject CSS directly to ensure styles are applied
+  const css = fs.readFileSync(path.resolve(__dirname, '../../assets/css/style.css'), 'utf8');
+  await page.addStyleTag({ content: css });
 
   // Get the bounding box of the .resume-container
   const resumeContainer = await page.$('.resume-container');
