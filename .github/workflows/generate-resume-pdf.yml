@@ -17,18 +17,27 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set up Pandoc
-        run: |
-          if ! command -v pandoc > /dev/null; then
-            sudo apt-get update
-            sudo apt-get install -y pandoc texlive-xetex
-          else
-            echo "Pandoc is already installed"
-          fi
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-      - name: Generate PDF from Markdown
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Install Bundler and Jekyll
         run: |
-          pandoc assets/md/BM_resume.md -o assets/BM_resume.pdf --pdf-engine=xelatex
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Serve site locally (background)
+        run: bundle exec jekyll serve --detach
+
+      - name: Generate PDF with Puppeteer
+        run: node generate-pdf.js
 
       - name: Set up Git user
         run: |
@@ -42,7 +51,7 @@ jobs:
       - name: Commit PDF
         run: |
           git add assets/BM_resume.pdf
-          git commit -m "Auto-generate resume PDF from Markdown [skip ci]" || echo "No changes to commit"
+          git commit -m "Auto-generate resume PDF from rendered site [skip ci]" || echo "No changes to commit"
           git push origin HEAD:${GITHUB_REF#refs/heads/}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
