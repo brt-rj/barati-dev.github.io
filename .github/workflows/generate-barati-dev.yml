@@ -35,11 +35,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Node.js dependencies
-        run: npm install puppeteer
+      - name: Install md-to-pdf
+        run: npm install -g md-to-pdf
 
-      - name: Generate PDF with Puppeteer
-        run: node assets/js/generate-pdf.js
+      - name: Generate PDF from Markdown
+        run: md-to-pdf assets/BM_resume.md --stylesheet assets/css/style.css --output assets/BM_resume.pdf
 
       - name: Set up Git user
         run: |
