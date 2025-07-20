@@ -18,6 +18,29 @@ const path = require('path');
   await page.goto('file://' + filePath, { waitUntil: 'networkidle0' });
   await page.waitForSelector('.resume-container');
 
+  // Force light theme (remove dark class/attribute)
+  await page.evaluate(() => {
+    document.body.classList.remove('dark');
+    document.documentElement.classList.remove('dark');
+    document.body.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+
+  // Hide everything except .resume-container
+  await page.evaluate(() => {
+    const resume = document.querySelector('.resume-container');
+    if (resume) {
+      let el = resume;
+      while (el.parentElement) {
+        Array.from(el.parentElement.children).forEach(child => {
+          if (child !== el) child.style.display = 'none';
+        });
+        el = el.parentElement;
+      }
+      resume.style.display = 'block';
+    }
+  });
+
   // Emulate screen media to use screen CSS
   await page.emulateMediaType('screen');
 
