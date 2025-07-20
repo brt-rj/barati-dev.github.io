@@ -2,6 +2,7 @@
 layout: project
 title: Sales Performance Dashboard
 subtitle: Data Engineering & AI Engineering Project
+permalink: /project-sales-performance.html
 ---
 
 ## Project Overview
