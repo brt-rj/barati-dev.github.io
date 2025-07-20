@@ -8,7 +8,7 @@ title: My Projects
 <div class="projects-container">
   
   <div class="project-item">
-    <h2>Project 1: Sales Performance Dashboard</h2>
+    <h2><a href="/project-sales-performance.html">Project 1: Sales Performance Dashboard</a></h2>
     <p>Interactive dashboard analyzing sales performance across different regions and product categories. Features include trend analysis, regional comparisons, and performance metrics visualization.</p>
     
     <div class="dashboard-container">
@@ -47,7 +47,7 @@ title: My Projects
   </div>
 
   <div class="project-item">
-    <h2>Project 2: Customer Analytics Dashboard</h2>
+    <h2><a href="/project-customer-analytics.html">Project 2: Customer Analytics Dashboard</a></h2>
     <p>Comprehensive customer analytics dashboard showcasing customer behavior patterns, segmentation analysis, and engagement metrics. Includes interactive filters and drill-down capabilities.</p>
     
     <div class="dashboard-container">
@@ -86,7 +86,7 @@ title: My Projects
   </div>
 
   <div class="project-item">
-    <h2>Project 3: Financial Performance Dashboard</h2>
+    <h2><a href="/project-financial-performance.html">Project 3: Financial Performance Dashboard</a></h2>
     <p>Advanced financial analytics dashboard providing insights into revenue trends, cost analysis, and profitability metrics. Features interactive charts and real-time data visualization.</p>
     
     <div class="dashboard-container">
