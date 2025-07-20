@@ -1,0 +1,9 @@
+# Jekyll configuration
+
+# Include the content directory for processing
+include:
+  - content
+
+# Other default settings (customize as needed)
+markdown: kramdown
+permalink: pretty 
