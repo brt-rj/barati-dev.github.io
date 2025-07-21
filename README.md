@@ -36,29 +36,6 @@ A personal portfolio and resume site for Bharathiraja Muthurajan, Data Platform 
 └── CNAME                      # Custom domain config
 ```
 
-## Local Development
-
-1. **Install dependencies**:
-   - Ruby, Bundler, Jekyll for site generation.
-   - Node.js for md-to-pdf (if you want to generate the PDF locally).
-
-2. **Serve the site locally**:
-   ```sh
-   bundle install
-   bundle exec jekyll serve
-   ```
-
-3. **Generate PDF locally** (optional):
-   ```sh
-   npm install -g md-to-pdf
-   md-to-pdf assets/BM_resume.md assets/BM_resume.pdf --stylesheet assets/css/style.css
-   ```
-
-## Deployment
-
-- The site is designed for GitHub Pages.
-- The workflow auto-generates and commits the latest resume PDF on each push.
-
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/bharathirajam)
