@@ -30,11 +30,14 @@ jobs:
       - name: Build site with Jekyll
         run: bundle exec jekyll build
 
-      - name: Install wkhtmltopdf
-        run: sudo apt-get update && sudo apt-get install -y wkhtmltopdf
+      - name: Install WeasyPrint
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+          pip3 install WeasyPrint
 
       - name: Generate PDF from resume.html
-        run: wkhtmltopdf --enable-local-file-access _site/resume/index.html assets/BM_resume.pdf
+        run: weasyprint _site/resume/index.html assets/BM_resume.pdf
 
       - name: Set up Git user
         run: |
