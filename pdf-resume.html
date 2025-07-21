@@ -1,0 +1,17 @@
+---
+permalink: /pdf-resume.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume PDF</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="resume-container">
+    {% capture resume_md %}{% include_relative assets/BM_resume.md %}{% endcapture %}
+    {{ resume_md | markdownify }}
+  </div>
+</body>
+</html> 
