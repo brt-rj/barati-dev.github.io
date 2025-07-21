@@ -631,3 +631,12 @@ ul li::before {
     }
   }
 }
+
+.resume-container {
+  padding: 2em;
+  background: $surface-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px $shadow-color;
+  margin: 2em auto;
+  max-width: 900px;
+}
