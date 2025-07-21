@@ -36,8 +36,8 @@ jobs:
           sudo apt-get install -y python3-pip python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
           pip3 install WeasyPrint
 
-      - name: Generate PDF from resume.html
-        run: weasyprint _site/resume/index.html assets/BM_resume.pdf
+      - name: Generate PDF from pdf-resume.html
+        run: weasyprint _site/pdf-resume.html assets/BM_resume.pdf
 
       - name: Set up Git user
         run: |
