@@ -30,13 +30,11 @@ jobs:
       - name: Build site with Jekyll
         run: bundle exec jekyll build
 
-      - name: Install Pandoc and TeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex
+      - name: Install wkhtmltopdf
+        run: sudo apt-get update && sudo apt-get install -y wkhtmltopdf
 
-      - name: Generate PDF from Markdown
-        run: pandoc assets/BM_resume.md -o assets/BM_resume.pdf --pdf-engine=xelatex
+      - name: Generate PDF from resume.html
+        run: wkhtmltopdf _site/resume/index.html assets/BM_resume.pdf
 
       - name: Set up Git user
         run: |
