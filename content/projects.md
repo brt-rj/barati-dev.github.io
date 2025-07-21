@@ -1,7 +1,7 @@
 ---
 layout: default
 title: My Projects
-permalink: /projects
+permalink: /projects/
 ---
 
 <h1>Data Analytics Projects</h1>
@@ -9,7 +9,7 @@ permalink: /projects
 <div class="projects-container">
   
   <div class="project-item">
-    <h2><a href="/project-sales-performance.html">Project 1: Sales Performance Dashboard</a></h2>
+    <h2><a href="/projects/project-sales-performance/">Project 1: Sales Performance Dashboard</a></h2>
     <p>Interactive dashboard analyzing sales performance across different regions and product categories. Features include trend analysis, regional comparisons, and performance metrics visualization.</p>
     
     <div class="dashboard-container">
@@ -48,7 +48,7 @@ permalink: /projects
   </div>
 
   <div class="project-item">
-    <h2><a href="/project-customer-analytics.html">Project 2: Customer Analytics Dashboard</a></h2>
+    <h2><a href="/projects/project-customer-analytics/">Project 2: Customer Analytics Dashboard</a></h2>
     <p>Comprehensive customer analytics dashboard showcasing customer behavior patterns, segmentation analysis, and engagement metrics. Includes interactive filters and drill-down capabilities.</p>
     
     <div class="dashboard-container">
@@ -87,7 +87,7 @@ permalink: /projects
   </div>
 
   <div class="project-item">
-    <h2><a href="/project-financial-performance.html">Project 3: Financial Performance Dashboard</a></h2>
+    <h2><a href="/projects/project-financial-performance/">Project 3: Financial Performance Dashboard</a></h2>
     <p>Advanced financial analytics dashboard providing insights into revenue trends, cost analysis, and profitability metrics. Features interactive charts and real-time data visualization.</p>
     
     <div class="dashboard-container">
@@ -125,4 +125,4 @@ permalink: /projects
     </div>
   </div>
 
-</div> 
+</div>

@@ -1,5 +1,12 @@
 # Jekyll configuration
 
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 # Include the content directory for processing
 include:
   - content

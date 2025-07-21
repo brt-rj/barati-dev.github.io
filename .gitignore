@@ -1,0 +1,12 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.bundle/
+vendor/
+Gemfile.lock
+*.log
+node_modules/
+*.DS_Store
+*.swp
+*.swo
+*.tmp
