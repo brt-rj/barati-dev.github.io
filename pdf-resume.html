@@ -10,8 +10,7 @@ permalink: /pdf-resume.html
 </head>
 <body>
   <div class="resume-container">
-    {% capture resume_md %}{% include_relative assets/BM_resume.md %}{% endcapture %}
-    {{ resume_md | markdownify }}
+    {% include_relative assets/BM_resume.md %}
   </div>
 </body>
 </html> 
