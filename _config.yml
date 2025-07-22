@@ -13,4 +13,4 @@ include:
 
 # Other default settings (customize as needed)
 markdown: kramdown
-permalink: pretty 
+permalink: pretty
