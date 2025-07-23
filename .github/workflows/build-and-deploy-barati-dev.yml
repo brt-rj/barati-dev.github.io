@@ -50,6 +50,8 @@ jobs:
           sudo apt-get install -y chromium-browser
           npm install puppeteer
           mkdir -p _site/assets
+          # Ensure resume content is copied
+          cp -r assets/resume _site/assets/
           node assets/js/generate-pdf.js
           cp assets/BM_resume.pdf _site/assets/
 

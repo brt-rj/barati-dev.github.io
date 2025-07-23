@@ -1,15 +1,15 @@
 ### Contact
-[email@example.com](mailto:email@example.com)  
-[LinkedIn](https://linkedin.com/in/...)  
-[GitHub](https://github.com/...)
+[barati_m@pm.me](mailto:barati_m@pm.me)  
+[LinkedIn](https://linkedin.com/in/bharathirajam)  
+[GitHub](https://github.com/brt-rj)
 
 ### Skills
 - Data Engineering
-- Machine Learning
 - Cloud Platforms
 - DevOps & MLOps
+- Machine Learning
 
 ### Certifications
 - Azure Data Engineer
-- AWS Solutions Architect
-- GCP Professional Engineer
+- Azure Solutions Architect
+- GCP Professional Data Engineer
