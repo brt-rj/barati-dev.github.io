@@ -1,76 +1,37 @@
 const puppeteer = require('puppeteer');
-const fs = require('fs');
 const path = require('path');
 
 (async () => {
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox']
   });
   const page = await browser.newPage();
 
-  // Serve the built site locally or open the file directly
-  const filePath = path.resolve(__dirname, '../../_site/resume/index.html');
-  if (!fs.existsSync(filePath)) {
-    console.error('Built site not found at', filePath);
-    process.exit(1);
-  }
-  await page.goto('file://' + filePath, { waitUntil: 'networkidle0' });
-  await page.waitForSelector('.resume-container');
-
-  // Force light theme (remove dark class/attribute)
-  await page.evaluate(() => {
-    document.body.classList.remove('dark');
-    document.documentElement.classList.remove('dark');
-    document.body.setAttribute('data-theme', 'light');
-    document.documentElement.setAttribute('data-theme', 'light');
+  // Set viewport to A4 size
+  await page.setViewport({
+    width: 794, // A4 width in pixels at 96 DPI
+    height: 1123, // A4 height
+    deviceScaleFactor: 2 // For better resolution
   });
 
-  // Hide everything except .resume-container
-  await page.evaluate(() => {
-    const resume = document.querySelector('.resume-container');
-    if (resume) {
-      let el = resume;
-      while (el.parentElement) {
-        Array.from(el.parentElement.children).forEach(child => {
-          if (child !== el) child.style.display = 'none';
-        });
-        el = el.parentElement;
-      }
-      resume.style.display = 'block';
-    }
+  await page.goto('file://' + path.resolve(__dirname, '../../_site/pdf-resume.html'), {
+    waitUntil: 'networkidle0'
   });
-
-  // Emulate screen media to use screen CSS
-  await page.emulateMediaType('screen');
-
-  // Inject CSS directly to ensure styles are applied
-  const css = fs.readFileSync(path.resolve(__dirname, '../../_site/assets/css/style.css'), 'utf8');
-  await page.addStyleTag({ content: css });
-
-  // Get the bounding box of the .resume-container
-  const resumeContainer = await page.$('.resume-container');
-  if (!resumeContainer) {
-    console.error('Could not find .resume-container on the page.');
-    await browser.close();
-    process.exit(1);
-  }
-  const boundingBox = await resumeContainer.boundingBox();
 
   await page.pdf({
     path: 'assets/BM_resume.pdf',
+    format: 'A4',
     printBackground: true,
-    width: boundingBox.width + 'px',
-    height: boundingBox.height + 'px',
-    pageRanges: '1',
-    clip: {
-      x: boundingBox.x,
-      y: boundingBox.y,
-      width: boundingBox.width,
-      height: boundingBox.height
-    }
+    margin: {
+      top: '1cm',
+      bottom: '1cm',
+      left: '1cm',
+      right: '1cm'
+    },
+    preferCSSPageSize: true
   });
 
   await browser.close();
-  console.log('PDF generated at assets/BM_resume.pdf');
-})(); 
+  console.log('PDF generated successfully');
+})().catch(console.error);

@@ -6,11 +6,13 @@ permalink: /pdf-resume.html
 <head>
   <meta charset="UTF-8">
   <title>Resume PDF</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/pdf-resume.css">
 </head>
 <body>
   <div class="resume-container">
-    {% include_relative assets/BM_resume.md %}
+    <div class="main-content">
+      {% include_relative assets/BM_resume.md %}
+    </div>
   </div>
 </body>
-</html> 
+</html>

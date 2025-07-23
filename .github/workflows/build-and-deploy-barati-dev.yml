@@ -46,9 +46,8 @@ jobs:
       - name: Generate PDF Resume
         if: ${{ github.event.inputs.generate_pdf == 'true' || github.event_name == 'push' }}
         run: |
-          # Add your PDF generation commands here, e.g.:
-          # weasyprint _site/resume/index.html _site/resume.pdf
-          echo "PDF generation step (customize as needed)"
+          npm install puppeteer
+          node assets/js/generate-pdf.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -64,4 +63,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
         uses: actions/deploy-pages@v4
