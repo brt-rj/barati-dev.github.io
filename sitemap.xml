@@ -14,7 +14,7 @@
   {% endfor %}
   {% for project in site.projects %}
     <url>
-      <loc>{{ site.url }}{{ project.url }}</loc>
+      <loc>{{ site.url }}{{ project.url | relative_url }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
