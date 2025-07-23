@@ -14,15 +14,16 @@ layout: none
             line-height: 1.6;
             color: #000;
             margin: 0;
-            padding: 2em;
+            padding: 0;
         }
 
         .resume-container {
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 40px auto;
             display: grid;
             grid-template-columns: 300px 1fr;
-            gap: 2em;
+            gap: 40px;
+            padding: 40px;
         }
 
         .sidebar {
@@ -62,14 +63,8 @@ layout: none
 </head>
 <body>
     <div class="resume-container">
-        <div class="sidebar">
-            {% capture sidebar_content %}{% include_relative assets/resume/_sidebar.md %}{% endcapture %}
-            {{ sidebar_content | markdownify }}
-        </div>
-        <div class="main-content">
-            {% capture main_content %}{% include_relative assets/resume/_main.md %}{% endcapture %}
-            {{ main_content | markdownify }}
-        </div>
+        {% capture content %}{% include_relative assets/BM_resume.md %}{% endcapture %}
+        {{ content | markdownify }}
     </div>
 </body>
 </html>

@@ -1,61 +1,37 @@
 const puppeteer = require('puppeteer');
 const path = require('path');
-const fs = require('fs');
 
 (async () => {
+  let browser;
   try {
-    // Debug logging
-    console.log('Current working directory:', process.cwd());
-    
-    // Verify file exists before proceeding
-    const htmlPath = path.resolve(process.cwd(), '_site/pdf-resume.html');
-    console.log('Looking for HTML file at:', htmlPath);
-    
-    if (!fs.existsSync(htmlPath)) {
-      throw new Error(`HTML file not found at ${htmlPath}`);
-    }
-
-    console.log('Launching browser...');
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: ['--no-sandbox']
     });
-
     const page = await browser.newPage();
-    await page.setViewport({ width: 1200, height: 1553 });
-
-    console.log('Loading resume page...');
-    await page.goto(`file://${htmlPath}`, {
-      waitUntil: ['networkidle0', 'domcontentloaded'],
-      timeout: 30000
+    
+    const htmlFile = path.join(process.cwd(), '_site', 'pdf-resume.html');
+    console.log('Loading:', htmlFile);
+    
+    await page.goto(`file://${htmlFile}`, {
+      waitUntil: 'networkidle0'
     });
-
-    // Wait for content to be rendered
-    await page.waitForSelector('.resume-container', { timeout: 10000 });
-
-    // Ensure output directory exists
-    const pdfDir = path.resolve(process.cwd(), 'assets');
-    if (!fs.existsSync(pdfDir)) {
-      fs.mkdirSync(pdfDir, { recursive: true });
-    }
-
-    console.log('Generating PDF...');
+    
+    const pdfPath = path.join(process.cwd(), '_site', 'assets', 'BM_resume.pdf');
+    console.log('Generating PDF:', pdfPath);
+    
     await page.pdf({
-      path: path.resolve(pdfDir, 'BM_resume.pdf'),
+      path: pdfPath,
       format: 'A4',
-      printBackground: true,
-      margin: {
-        top: '20mm',
-        right: '20mm',
-        bottom: '20mm',
-        left: '20mm'
-      }
+      margin: { top: '2cm', right: '2cm', bottom: '2cm', left: '2cm' },
+      printBackground: true
     });
-
-    console.log('PDF generated successfully!');
-    await browser.close();
+    
+    console.log('PDF generated successfully');
   } catch (error) {
-    console.error('Error generating PDF:', error);
+    console.error('PDF generation failed:', error);
     process.exit(1);
+  } finally {
+    if (browser) await browser.close();
   }
 })();
