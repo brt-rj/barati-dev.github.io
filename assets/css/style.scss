@@ -689,7 +689,7 @@ ul li::before {
     background-color: $surface-color;
     border-radius: 0.75rem;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; // Increased margin to create spacing between steps
     box-shadow: 0 4px 6px -1px $shadow-color;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -704,37 +704,6 @@ ul li::before {
         flex-wrap: wrap;
         gap: 0.75rem;
         margin-top: 1rem;
-    }
-}
-
-.flow-arrow {
-    text-align: center;
-    font-size: 2rem;
-    color: $text-secondary;
-    margin: 1rem auto;
-    width: 100%;
-    position: relative;
-    height: 2rem;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background-color: $border-color;
-        transform: translateX(-50%);
-    }
-    
-    &::after {
-        content: '↓';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        background-color: $bg-color;
-        padding: 0.5rem;
     }
 }
 

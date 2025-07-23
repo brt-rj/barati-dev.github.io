@@ -5,7 +5,7 @@ permalink: /resume/
 ---
 
 <div class="resume-header">
-  <a href="{{ site.baseurl }}/assets/BM_resume.pdf" class="resume-download" download>Download PDF</a>
+  <a href="/assets/BM_resume.pdf" class="resume-download" target="_blank">Download PDF</a>
 </div>
 
 <div class="resume-container">
