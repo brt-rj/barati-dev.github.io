@@ -16,12 +16,12 @@ collections:
 include:
   - content
   - assets
-  - _projects  # ✓ Correct
-  - roadmap.html
+  - _projects
 
 # Exclude files and directories
 exclude:
   - data-platform-ai--engineer.html
+  - roadmap.html
   - Gemfile
   - Gemfile.lock
   - node_modules
