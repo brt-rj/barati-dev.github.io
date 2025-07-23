@@ -11,7 +11,18 @@ permalink: /pdf-resume.html
 <body>
   <div class="resume-container">
     <div class="main-content">
-      {% include_relative assets/BM_resume.md %}
+      <div class="sidebar">
+        {% capture sidebar_content %}
+        {% include_relative assets/resume/_sidebar.md %}
+        {% endcapture %}
+        {{ sidebar_content | markdownify }}
+      </div>
+      <div class="main-section">
+        {% capture main_content %}
+        {% include_relative assets/resume/_main.md %}
+        {% endcapture %}
+        {{ main_content | markdownify }}
+      </div>
     </div>
   </div>
 </body>
