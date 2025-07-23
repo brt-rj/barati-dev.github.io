@@ -1,7 +1,18 @@
-<!-- ...existing code... -->
-<ul>
-  {% for project in site.projects %}
-    <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
-  {% endfor %}
-</ul>
-<!-- ...existing code... -->
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<div class="projects-list">
+  <ul>
+    {% for project in site.projects %}
+      <li>
+        <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        {% if project.description %}
+        <p>{{ project.description }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

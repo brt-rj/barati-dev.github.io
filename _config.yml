@@ -1,16 +1,20 @@
 # Jekyll configuration
 
+# Site settings
+baseurl: ""
+url: ""
 
 # Collections
 collections:
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /projects/:path/
 
 # Include the content directory for processing
 include:
   - content
+  - assets
 
-# Other default settings (customize as needed)
+# Other default settings
 markdown: kramdown
 permalink: pretty
