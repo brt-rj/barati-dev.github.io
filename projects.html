@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 ---
@@ -8,9 +8,9 @@ permalink: /projects/
   <ul>
     {% for project in site.projects %}
       <li>
-        <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
-        {% if project.description %}
-        <p>{{ project.description }}</p>
+        <a href="{{ project.url }}">{{ project.title }}</a>
+        {% if project.subtitle %}
+        <p>{{ project.subtitle }}</p>
         {% endif %}
       </li>
     {% endfor %}

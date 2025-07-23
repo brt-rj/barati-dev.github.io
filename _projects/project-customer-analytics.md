@@ -2,7 +2,7 @@
 layout: project
 title: Customer Analytics Dashboard
 subtitle: Data Engineering & AI Engineering Project
-permalink: /project-customer-analytics
+permalink: /projects/customer-analytics/
 ---
 ## Project Overview
 

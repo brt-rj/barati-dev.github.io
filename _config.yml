@@ -10,13 +10,26 @@ url: "https://barati.dev"
 collections:
   projects:
     output: true
-    permalink: /projects/:title/
+    permalink: /projects/:title/  # ✓ Correct
 
 # Include the content directory for processing
 include:
   - content
   - assets
-  - _projects
+  - _projects  # ✓ Correct
+
+# Exclude files and directories
+exclude:
+  - data-platform-ai--engineer.html
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+  - package.json
+  - package-lock.json
+  - .git
 
 # Other default settings
 markdown: kramdown
