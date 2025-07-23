@@ -49,11 +49,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y chromium-browser
           npm install puppeteer
-          mkdir -p _site/assets
-          # Ensure resume content is copied
-          cp -r assets/resume _site/assets/
+          # Debug directory contents
+          echo "Contents of _site directory:"
+          ls -la _site
+          echo "Contents of assets directory:"
+          ls -la assets
+          # Generate PDF
           node assets/js/generate-pdf.js
+          # Ensure PDF is copied to the right location
+          mkdir -p _site/assets
           cp assets/BM_resume.pdf _site/assets/
+          # Verify PDF was created
+          ls -la _site/assets/BM_resume.pdf
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
