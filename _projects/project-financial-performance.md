@@ -2,7 +2,7 @@
 layout: project
 title: Financial Performance Dashboard
 subtitle: Data Engineering & AI Engineering Project
-permalink: /project-financial-performance
+permalink: /projects/financial-performance/
 ---
 ## Project Overview
 

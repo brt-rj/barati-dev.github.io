@@ -2,7 +2,7 @@
 layout: project
 title: Sales Performance Dashboard
 subtitle: Data Engineering & AI Engineering Project
-permalink: /project-sales-performance
+permalink: /projects/sales-performance/  # ✓ Correct format
 ---
 ## Project Overview
 
