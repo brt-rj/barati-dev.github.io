@@ -17,6 +17,7 @@ include:
   - content
   - assets
   - _projects  # ✓ Correct
+  - roadmap.html
 
 # Exclude files and directories
 exclude:

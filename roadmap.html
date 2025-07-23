@@ -1,0 +1,238 @@
+---
+layout: default
+title: The Roadmap to a Data Platform & AI Engineer
+permalink: /roadmap/
+---
+
+<!-- Keep Chart.js for visualizations -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="roadmap-container">
+    <section class="roadmap-section">
+        <h1>The Roadmap to a Data Platform & AI Engineer</h1>
+        <p class="intro-text">A visual journey through the skills, technologies, and phases required to master this critical role.</p>
+    </section>
+
+    <section class="roadmap-section">
+        <h2>The Rise of a "Full-Stack" Technologist</h2>
+        <p>The Data Platform & AI Engineer is a multidisciplinary expert who builds the bridge between raw data and intelligent applications. This role demands a unique blend of skills in software development, data engineering, and machine learning to create the scalable, automated, and secure infrastructure that powers the AI-driven enterprise.</p>
+    </section>
+
+    <section class="roadmap-section">
+        <h2>The Four Phases of Mastery</h2>
+        <div class="phase-timeline">
+            <div class="phase-item">
+                <h3>Phase 1: Foundations</h3>
+                <p>Programming, Data Basics, SQL, Git</p>
+            </div>
+            <div class="phase-item">
+                <h3>Phase 2: Data Engineering</h3>
+                <p>ETL, Data Warehousing, Big Data, Data Lakes</p>
+            </div>
+            <div class="phase-item">
+                <h3>Phase 3: Machine Learning</h3>
+                <p>ML Algorithms, Model Training, Evaluation</p>
+            </div>
+            <div class="phase-item">
+                <h3>Phase 4: AI Engineering</h3>
+                <p>Model Deployment, Monitoring, Optimization</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="roadmap-section" id="skills-breakdown">
+        <h2>Core Skill Area Distribution</h2>
+        <div class="skills-chart-container">
+            <canvas id="skillsDonutChart"></canvas>
+            <div class="skills-legend"></div>
+        </div>
+    </section>
+
+    <section class="roadmap-section" id="tech-stack">
+        <h2>Essential Technology Stack Ranking</h2>
+        <div class="tech-chart-container">
+            <canvas id="techStackBarChart"></canvas>
+        </div>
+    </section>
+
+    <section class="roadmap-section">
+        <h2>The AI/ML Data Pipeline Lifecycle</h2>
+        <div class="pipeline-stages">
+            <div class="pipeline-stage">
+                <h3>Data Ingestion</h3>
+                <p>Collecting data from various sources</p>
+                <p>Batch vs. stream processing</p>
+                <p>Data validation and cleansing</p>
+            </div>
+            <div class="pipeline-stage">
+                <h3>Data Storage</h3>
+                <p>Data lakes, warehouses, and marts</p>
+                <p>Schema design and optimization</p>
+                <p>Data partitioning and indexing</p>
+            </div>
+            <div class="pipeline-stage">
+                <h3>Data Processing</h3>
+                <p>ETL vs. ELT processes</p>
+                <p>Data transformation and enrichment</p>
+                <p>Handling missing and inconsistent data</p>
+            </div>
+            <div class="pipeline-stage">
+                <h3>Data Analysis & Modeling</h3>
+                <p>Exploratory data analysis (EDA)</p>
+                <p>Feature engineering and selection</p>
+                <p>Model training, evaluation, and tuning</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="roadmap-section">
+        <h2>The Value of Certification</h2>
+        <p>Certifications can help validate your skills and knowledge, making you a more competitive candidate in the job market. They demonstrate your commitment to professional development and expertise in specific tools or methodologies.</p>
+        <div class="certification-resources">
+            <div class="certification-recommended">
+                <h3>Recommended Certifications</h3>
+                <ul>
+                    <li>Google Cloud Professional Data Engineer</li>
+                    <li>Microsoft Azure Data Engineer Associate</li>
+                    <li>AWS Certified Data Analytics - Specialty</li>
+                    <li>IBM Data Science Professional Certificate</li>
+                </ul>
+            </div>
+            <div class="certification-preparation">
+                <h3 class="text-xl font-semibold mb-4" style="color: #58508D;">Certification Preparation Resources</h3>
+                <p class="text-gray-600 mb-2">Online courses (Coursera, edX, Udacity)</p>
+                <p class="text-gray-600 mb-2">Official certification guides and documentation</p>
+                <p class="text-gray-600">Practice exams and hands-on labs</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Keep modal for interactive explanations -->
+<div id="explanationModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <div id="modalContent">
+            <p id="loadingIndicator" class="hidden">Generating explanation...</p>
+            <p id="explanationText"></p>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Data & AI Engineering Insights. All rights reserved.</p>
+    <p class="text-sm text-gray-400 mt-1">Infographic created to visualize the path to becoming a Data Platform & AI Engineer.</p>
+</footer>
+
+<script>
+// Keep original chart configurations and interactivity
+const energeticPlayfulPalette = {
+    blue: '#003F5C',
+    purple: '#58508D',
+    pink: '#BC5090',
+    orange: '#FF6361',
+    yellow: '#FFA600'
+};
+
+// Skills donut chart
+const skillsDonutCtx = document.getElementById('skillsDonutChart').getContext('2d');
+new Chart(skillsDonutCtx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Programming & Software Development', 'Data Engineering & Databases', 'Machine Learning & AI'],
+        datasets: [{
+            label: 'Skill Areas',
+            data: [40, 35, 25],
+            backgroundColor: [
+                energeticPlayfulPalette.blue,
+                energeticPlayfulPalette.purple,
+                energeticPlayfulPalette.pink
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        let label = tooltipItem.label || '';
+                        if (tooltipItem.parsed !== null) {
+                            label += ': ' + tooltipItem.parsed + '%';
+                        }
+                        return label;
+                    }
+                }
+            }
+        }
+    }
+});
+
+// Tech stack bar chart
+const techStackBarCtx = document.getElementById('techStackBarChart').getContext('2d');
+new Chart(techStackBarCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Python', 'Java', 'SQL', 'Apache Spark', 'TensorFlow'],
+        datasets: [{
+            label: 'Proficiency Level',
+            data: [90, 75, 85, 70, 80],
+            backgroundColor: energeticPlayfulPalette.orange,
+            borderColor: energeticPlayfulPalette.yellow,
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 10
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw;
+                    }
+                }
+            }
+        }
+    }
+});
+
+// Keep modal functionality
+const modal = document.getElementById("explanationModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalContent = document.getElementById("modalContent");
+const loadingIndicator = document.getElementById("loadingIndicator");
+const explanationText = document.getElementById("explanationText");
+const closeModal = document.getElementsByClassName("modal-close")[0];
+
+function openModal(title, content) {
+    modalTitle.innerText = title;
+    explanationText.innerHTML = content;
+    modal.classList.remove("hidden");
+}
+
+closeModal.onclick = function() {
+    modal.classList.add("hidden");
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.classList.add("hidden");
+    }
+}
+</script>
