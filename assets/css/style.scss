@@ -683,3 +683,54 @@ ul li::before {
     padding-left: 0;
   }
 }
+
+/* Skills Page Styles */
+.flow-step {
+    background-color: $surface-color;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px $shadow-color;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px $shadow-color;
+    }
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin: 0.25rem;
+    
+    i {
+        font-size: 1rem;
+    }
+    
+    // Vendor-specific colors while maintaining accessibility
+    &[class*="apache"] {
+        background-color: rgba($error-color, 0.1);
+        color: $error-color;
+    }
+    
+    &[class*="microsoft"] {
+        background-color: rgba($primary-accent, 0.1);
+        color: $primary-accent;
+    }
+    
+    &[class*="aws"] {
+        background-color: rgba($warning-color, 0.1);
+        color: $warning-color;
+    }
+    
+    &[class*="google"] {
+        background-color: rgba($success-color, 0.1);
+        color: $success-color;
+    }
+}
