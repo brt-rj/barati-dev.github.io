@@ -2,49 +2,49 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 (async () => {
-  const browser = await puppeteer.launch({
-    headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
-  
   try {
+    console.log('Launching browser...');
+    const browser = await puppeteer.launch({
+      headless: 'new',
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
     const page = await browser.newPage();
-    
-    // Set viewport to A4 size
+
+    // A4 size in pixels at 96 DPI
     await page.setViewport({
       width: 794,
       height: 1123,
       deviceScaleFactor: 2
     });
 
-    console.log('Loading PDF template...');
-    const templatePath = path.resolve(__dirname, '../../_site/pdf-resume.html');
-    await page.goto(`file://${templatePath}`, {
+    console.log('Loading resume page...');
+    await page.goto(`file://${path.resolve(__dirname, '../../_site/pdf-resume.html')}`, {
       waitUntil: ['networkidle0', 'domcontentloaded']
     });
 
-    // Wait for content to be rendered
-    await page.waitForSelector('.main-content', { timeout: 5000 });
+    // Ensure content is loaded
+    await page.waitForSelector('.resume-container');
 
     console.log('Generating PDF...');
     await page.pdf({
-      path: 'assets/BM_resume.pdf',
+      path: path.resolve(__dirname, '../../assets/BM_resume.pdf'),
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '1cm',
-        bottom: '1cm',
-        left: '1cm',
-        right: '1cm'
+        top: '2cm',
+        right: '2cm',
+        bottom: '2cm',
+        left: '2cm'
       },
+      displayHeaderFooter: false,
       preferCSSPageSize: true
     });
 
-    console.log('PDF generated successfully');
+    console.log('PDF generated successfully!');
+    await browser.close();
   } catch (error) {
     console.error('Error generating PDF:', error);
     process.exit(1);
-  } finally {
-    await browser.close();
   }
-})().catch(console.error);
+})();
