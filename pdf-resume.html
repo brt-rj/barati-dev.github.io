@@ -7,64 +7,41 @@ layout: none
     <meta charset="UTF-8">
     <title>Resume - Bharathiraja Muthurajan</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
-        
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            color: #000;
             margin: 0;
-            padding: 0;
+            padding: 40px;
         }
-
         .resume-container {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 0 auto;
+        }
+        .main-content {
             display: grid;
             grid-template-columns: 300px 1fr;
             gap: 40px;
-            padding: 40px;
         }
-
-        .sidebar {
-            background-color: #f8f9fa;
-            padding: 2em;
-            border-right: 1px solid #dee2e6;
+        .left-column {
+            border-right: 1px solid #ddd;
+            padding-right: 20px;
         }
-
-        .main-content {
-            padding: 2em;
-        }
-
-        h1 { 
-            font-size: 28px;
-            margin: 0 0 0.2em 0;
-        }
-
-        h2 {
-            font-size: 20px;
-            color: #666;
-            margin: 0 0 1em 0;
-        }
-
-        h3 {
-            font-size: 18px;
-            border-bottom: 1px solid #dee2e6;
-            padding-bottom: 0.5em;
-            margin-top: 1.5em;
-        }
-
-        @media print {
-            body { margin: 0; }
-            .resume-container { break-inside: avoid; }
-            .sidebar { background-color: #fff; }
-        }
+        h1, h2, h3 { margin-top: 0; }
+        ul { padding-left: 20px; }
     </style>
 </head>
 <body>
     <div class="resume-container">
-        {% capture content %}{% include_relative assets/BM_resume.md %}{% endcapture %}
-        {{ content | markdownify }}
+        <div class="main-content">
+            <div class="left-column">
+                {% capture sidebar %}{% include_relative assets/resume/_sidebar.md %}{% endcapture %}
+                {{ sidebar | markdownify }}
+            </div>
+            <div class="experience-certifications">
+                {% capture main %}{% include_relative assets/resume/_main.md %}{% endcapture %}
+                {{ main | markdownify }}
+            </div>
+        </div>
     </div>
 </body>
 </html>
