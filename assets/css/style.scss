@@ -632,11 +632,54 @@ ul li::before {
   }
 }
 
+/* Resume Specific Styles */
+.resume-header {
+  text-align: right;
+  margin-bottom: 2em;
+}
+
+.resume-download {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: $primary-accent;
+  color: $surface-color;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: $primary-accent-light;
+    text-decoration: none;
+    border-bottom: none;
+  }
+}
+
 .resume-container {
+  font-family: 'Raleway', sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 2em;
   background: $surface-color;
   border-radius: 8px;
   box-shadow: 0 4px 20px $shadow-color;
-  margin: 2em auto;
-  max-width: 900px;
+  
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  h1, h2, h3, h4 {
+    color: $primary-accent;
+    margin-bottom: 0.5em;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
 }

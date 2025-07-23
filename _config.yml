@@ -1,19 +1,22 @@
 # Jekyll configuration
 
 # Site settings
+title: "Barati - Data Platform and AI Engineer"
+description: "Personal portfolio and resume site"
 baseurl: ""
-url: ""
+url: "https://barati.dev"
 
 # Collections
 collections:
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /projects/:title/
 
 # Include the content directory for processing
 include:
   - content
   - assets
+  - _projects
 
 # Other default settings
 markdown: kramdown
