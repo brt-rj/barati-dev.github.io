@@ -1,10 +1,16 @@
 ---
-layout: page
+layout: default
 title: Resume
 permalink: /resume/
 ---
-<a href="{{ site.baseurl }}/assets/BM_resume.pdf" class="resume-download" download target="_blank">Download PDF</a>
-<div class="resume-container">
-  {% include_relative assets/BM_resume.md %}
+
+<div class="resume-header">
+  <a href="{{ site.baseurl }}/assets/BM_resume.pdf" class="resume-download" download>Download PDF</a>
 </div>
+
+<div class="resume-container">
+  {% capture resume_content %}
+  {% include_relative assets/BM_resume.md %}
+  {% endcapture %}
+  {{ resume_content | markdownify }}
 </div>
