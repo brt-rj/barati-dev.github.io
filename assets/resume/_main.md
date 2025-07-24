@@ -1,35 +1,48 @@
 # Bharathiraja Muthurajan
-## Senior Data Platform & AI Engineer
+## Data Analyst
 
-### Professional Experience
+### Professional Summary
+Certified data analyst with more than five years of experience as a researcher in India's top-ranking education institute. Comprehensive knowledge of building data analytics pipelines on on-premise and cloud platforms for real-time descriptive and predictive analytics. Experience includes programming languages like SQL and python and analytics business intelligence tools like Tableau and Power BI. Project management experience collaborating across IT services companies and research labs to deliver on-time and industry-compatible research outputs.
 
-**Senior Data Engineer | Leading Tech Company**  
-*2020 - Present*
-- Architected and implemented cloud-native data platforms using Azure Synapse, Data Factory, and Databricks
-- Led development of ML pipelines and MLOps practices using Azure ML and GitHub Actions
-- Managed multi-cloud infrastructure through Infrastructure as Code using Terraform
+### Experience
 
-**Data Engineer | Global Analytics Firm**  
-*2018 - 2020*
-- Developed ETL/ELT pipelines using Azure Data Factory and Databricks
-- Implemented data quality frameworks and monitoring solutions
-- Optimized data warehouse performance and cost efficiency
+**Data Analyst (Research Scholar) | IITM**  
+*Aug 2016 – Apr 2022 | Chennai, India*
+
+- Published 6 peer-reviewed journal articles on the analysis of traffic sensor data using descriptive and predictive analytic tools Tableau, SQL, and Python
+- Developed 2 traffic scanners using Wi-Fi and LiDAR sensor technology with Linux OS and Python
+- Designed and developed data analytics pipelines for in-house traffic sensors with batch and stream processing using Spark, Microsoft Azure services, and reporting using Tableau
+- Migrated previous generation sensor data pipeline consisting of over 400 devices from on-premise to AWS cloud infrastructure improving sensor operation reliability by more than 15%
+- Operated as the point of contact for 2 industry funded projects, coordinating deliverables across 2 research labs, and 9 scholars with on-time project closure
+- Managed 8 field technicians in the maintenance of a total of 590+ traffic sensors, provided them with operational dashboards, and created performance incentives
+- Implemented continuous monitoring of lab developed sensors using operational dashboards and reports using Power BI
+- Spearheaded the successful retrieval of 240 transit vehicle location sensors within 6 months
+- Mentored 4 technical project staff and undergraduate researchers on traffic data analysis projects
+- Devised 2 image processing software for vehicle trajectory tracking and counting using Python
+- Orchestrated international data collection project in-person in India and United States
+- Collected 30 days of naturalistic pedestrian behavior data in collaboration with Austrian road safety board
 
 ### Education
 
-**Master of Science in Computer Science**  
-*Top University, 2018*
-- Specialization in Machine Learning and Data Systems
-- GPA: 3.9/4.0
+**IIT Madras** | *Graduate Studies*  
+*Apr 2022 | Chennai, India*  
+Research in traffic state estimation and sensor development
+- Data Science
+- Image processing
+- Real-time traffic data
 
-### Key Projects
+**FH Technikum Wien** | *Master of Science*  
+*Jul 2016 | Vienna, Austria*  
+Intelligent Transportation Systems
+- Data Analysis
+- Sensor development
 
-**Enterprise Data Platform Migration**
-- Led migration of on-premise data warehouse to Azure Synapse
-- Implemented automated CI/CD pipelines using Azure DevOps
-- Reduced operational costs by 40%
+**University of St Andrews** | *PG Diploma*  
+*Nov 2013 | St Andrews, Scotland*  
+Networks and Distributed Systems
+- Cloud computing
+- Programming
 
-**ML Model Deployment Platform**
-- Built scalable MLOps platform using Azure ML and Kubernetes
-- Automated model training and deployment workflows
-- Improved model deployment time by 60%
+**VCET** | *Bachelors in Engineering*  
+*Jun 2012 | Madurai, India*  
+Electronics and Communication

@@ -5,41 +5,157 @@ layout: none
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resume - Bharathiraja Muthurajan</title>
+    <title>Bharathiraja Muthurajan - Resume</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
+            color: #000;
             margin: 0;
             padding: 40px;
         }
-        .resume-container {
+        .container {
             max-width: 1000px;
             margin: 0 auto;
         }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .header h2 {
+            margin: 5px 0;
+            font-size: 20px;
+            color: #444;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
         .main-content {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 40px;
         }
-        .left-column {
-            border-right: 1px solid #ddd;
-            padding-right: 20px;
+        .section {
+            margin-bottom: 25px;
         }
-        h1, h2, h3 { margin-top: 0; }
-        ul { padding-left: 20px; }
+        h3 {
+            font-size: 18px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .experience-item h4 {
+            margin: 0;
+            font-weight: bold;
+        }
+        .experience-item .date {
+            font-style: italic;
+            color: #666;
+        }
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .container { max-width: 100%; }
+        }
     </style>
 </head>
 <body>
-    <div class="resume-container">
+    <div class="container">
+        <div class="header">
+            <h1>Bharathiraja Muthurajan</h1>
+            <h2>Data Analyst</h2>
+        </div>
+        
+        <div class="contact-info">
+            +91-875-4988-874 | <a href="https://linkedin.com/in/bharathirajam">linkedin.com/in/bharathirajam</a> | 
+            <a href="https://github.com/brtrj">github.com/brtrj</a> | <a href="https://scholar.google.com/bharathirajam">scholar.google.com/bharathirajam</a><br>
+            <a href="https://bharathirajam.com">bharathirajam.com</a> | bharathiraja.m@outlook.com
+        </div>
+
         <div class="main-content">
             <div class="left-column">
-                {% capture sidebar %}{% include_relative assets/resume/_sidebar.md %}{% endcapture %}
-                {{ sidebar | markdownify }}
+                <div class="section">
+                    <h3>SKILLS</h3>
+                    <h4>LANGUAGES</h4>
+                    <ul>
+                        <li>SQL (MySQL)</li>
+                        <li>Python (PySpark 3.x)</li>
+                        <li>R</li>
+                        <li>Markdown</li>
+                    </ul>
+
+                    <h4>DEVELOPER</h4>
+                    <ul>
+                        <li>Git</li>
+                        <li>Linux shell</li>
+                        <li>Jupyter notebook</li>
+                        <li>Visual Studio Code</li>
+                        <li>Amazon Web Services</li>
+                        <li>Microsoft Azure</li>
+                    </ul>
+
+                    <h4>ANALYTICS & BI</h4>
+                    <ul>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft Power BI</li>
+                        <li>Tableau Desktop</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>CERTIFICATIONS</h3>
+                    <ul>
+                        <li>Tableau Certified Data Analyst, Aug 2024</li>
+                        <li>Power BI Data Analyst Associate, Dec 2023</li>
+                        <li>Google Data Analytics Certificate, Nov 2023</li>
+                        <li>Databricks Certified Associate Developer for Apache Spark 3.0, Sep 2024</li>
+                        <li>AWS Certified Developer - Associate, Dec 2025</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experience-certifications">
-                {% capture main %}{% include_relative assets/resume/_main.md %}{% endcapture %}
-                {{ main | markdownify }}
+
+            <div class="right-column">
+                <div class="section">
+                    <h3>PROFESSIONAL SUMMARY</h3>
+                    <p>{{ page.summary }}</p>
+                </div>
+
+                <div class="section">
+                    <h3>EXPERIENCE</h3>
+                    {{ content }}
+                </div>
+
+                <div class="section">
+                    <h3>EDUCATION</h3>
+                    <div class="education-item">
+                        <h4>IIT MADRAS | Graduate Studies</h4>
+                        <div class="date">Apr 2022 | Chennai, India</div>
+                        <p>Research in traffic state estimation and sensor development</p>
+                        <ul>
+                            <li>Data Science</li>
+                            <li>Image processing</li>
+                            <li>Real-time traffic data</li>
+                        </ul>
+                    </div>
+                    <!-- ...remaining education items... -->
+                </div>
             </div>
         </div>
     </div>
