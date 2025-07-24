@@ -1,13 +1,19 @@
 # Bharathiraja Muthurajan
-## Data Analyst
+
+## Data platform & AI engineer
 
 ### Professional Summary
+
 Certified data analyst with more than five years of experience as a researcher in India's top-ranking education institute. Comprehensive knowledge of building data analytics pipelines on on-premise and cloud platforms for real-time descriptive and predictive analytics. Experience includes programming languages like SQL and python and analytics business intelligence tools like Tableau and Power BI. Project management experience collaborating across IT services companies and research labs to deliver on-time and industry-compatible research outputs.
 
 ### Experience
 
-**Data Analyst (Research Scholar) | IITM**  
-*Aug 2016 – Apr 2022 | Chennai, India*
+**Data Engineer | BCI***April 2023 – present| Remote, India*
+
+- Something somethin
+- Something something
+
+**Data Analyst (Research Scholar) | IITM***Aug 2016 – Apr 2022 | Chennai, India*
 
 - Published 6 peer-reviewed journal articles on the analysis of traffic sensor data using descriptive and predictive analytic tools Tableau, SQL, and Python
 - Developed 2 traffic scanners using Wi-Fi and LiDAR sensor technology with Linux OS and Python
@@ -21,28 +27,3 @@ Certified data analyst with more than five years of experience as a researcher i
 - Devised 2 image processing software for vehicle trajectory tracking and counting using Python
 - Orchestrated international data collection project in-person in India and United States
 - Collected 30 days of naturalistic pedestrian behavior data in collaboration with Austrian road safety board
-
-### Education
-
-**IIT Madras** | *Graduate Studies*  
-*Apr 2022 | Chennai, India*  
-Research in traffic state estimation and sensor development
-- Data Science
-- Image processing
-- Real-time traffic data
-
-**FH Technikum Wien** | *Master of Science*  
-*Jul 2016 | Vienna, Austria*  
-Intelligent Transportation Systems
-- Data Analysis
-- Sensor development
-
-**University of St Andrews** | *PG Diploma*  
-*Nov 2013 | St Andrews, Scotland*  
-Networks and Distributed Systems
-- Cloud computing
-- Programming
-
-**VCET** | *Bachelors in Engineering*  
-*Jun 2012 | Madurai, India*  
-Electronics and Communication
