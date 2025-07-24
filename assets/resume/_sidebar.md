@@ -1,27 +1,35 @@
 ### Contact
-📧 [barati_m@pm.me](mailto:barati_m@pm.me)  
-💼 [LinkedIn](https://linkedin.com/in/bharathiraja9)  
-🔗 [GitHub](https://github.com/barati-dev)
+📧 bharathiraja.m@outlook.com  
+💼 [LinkedIn](https://linkedin.com/in/bharathirajam)  
+🔗 [GitHub](https://github.com/brtrj)  
+🎓 [Google Scholar](https://scholar.google.com/bharathirajam)  
+🌐 [bharathirajam.com](https://bharathirajam.com)  
+📱 +91-875-4988-874
 
-### Technical Skills
+### Skills
 
-**Cloud Platforms**
-- Azure Data Services
-- AWS Analytics
-- GCP Data Solutions
+**Languages**
+- SQL (MySQL)
+- Python (PySpark 3.x)
+- R
+- Markdown
 
-**Data Engineering**
-- Azure Data Factory
-- Databricks
-- Azure Synapse
+**Developer Tools**
+- Git
+- Linux shell
+- Jupyter notebook
+- Visual Studio Code
+- Amazon Web Services
+- Microsoft Azure
 
-**MLOps & DevOps**
-- Azure DevOps
-- GitHub Actions
-- Kubernetes
+**Analytics & BI**
+- Microsoft Excel
+- Microsoft Power BI
+- Tableau Desktop
 
 ### Certifications
-- Azure Data Engineer Associate
-- Azure Solutions Architect Expert
-- GCP Professional Data Engineer
-- AWS Data Analytics Specialty
+- Tableau Certified Data Analyst
+- Power BI Data Analyst Associate
+- Google Data Analytics Certificate
+- Databricks Certified Associate Developer
+- AWS Certified Developer - Associate

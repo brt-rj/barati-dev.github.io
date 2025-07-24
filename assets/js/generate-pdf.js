@@ -24,30 +24,35 @@ const path = require('path');
       deviceScaleFactor: 2
     });
 
-    const htmlPath = path.join(process.cwd(), '_site', 'pdf-resume', 'index.html');
+    const htmlPath = path.join(process.cwd(), '_site', 'pdf-resume.html');
     console.log('Loading resume from:', htmlPath);
     
     await page.goto(`file://${htmlPath}`, {
-      waitUntil: ['networkidle0', 'load', 'domcontentloaded'],
-      timeout: 30000
+      waitUntil: ['networkidle0', 'domcontentloaded']
     });
 
-    // Wait for content to be fully rendered
-    await page.waitForSelector('.resume-container', { timeout: 10000 });
+    // Wait for content to be rendered
+    await page.waitForSelector('.container');
 
-    const outputPath = path.join(process.cwd(), '_site', 'assets', 'BM_resume.pdf');
-    console.log('Generating PDF at:', outputPath);
+    const pdfPath = path.join(process.cwd(), '_site', 'assets', 'BM_resume.pdf');
+    console.log('Generating PDF at:', pdfPath);
 
     await page.pdf({
-      path: outputPath,
+      path: pdfPath,
       format: 'A4',
       printBackground: true,
-      margin: { top: '2cm', right: '2cm', bottom: '2cm', left: '2cm' }
+      margin: {
+        top: '1.5cm',
+        right: '1.5cm',
+        bottom: '1.5cm',
+        left: '1.5cm'
+      },
+      preferCSSPageSize: true
     });
 
     console.log('PDF generated successfully');
   } catch (error) {
-    console.error('PDF generation failed:', error);
+    console.error('Error generating PDF:', error);
     process.exit(1);
   } finally {
     if (browser) await browser.close();
