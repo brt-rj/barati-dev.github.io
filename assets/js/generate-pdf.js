@@ -35,7 +35,7 @@ const path = require('path');
     });
 
     // Wait for content to be rendered
-    await page.waitForSelector('.container');
+    await page.waitForSelector('.resume-container', { timeout: 20000 });
 
     const pdfPath = path.join(process.cwd(), '_site', 'assets', 'BM_resume.pdf');
     console.log('Generating PDF at:', pdfPath);

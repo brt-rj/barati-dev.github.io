@@ -1,7 +1,7 @@
 ---
 layout: pdf-resume
-title: Bharathiraja Muthurajan
+title: Resume - Bharathiraja Muthurajan
 permalink: /pdf-resume/
 ---
 
-{% include_relative assets/BM_resume.md %}
+<!-- The content is included via the layout. No need to add anything here. -->
