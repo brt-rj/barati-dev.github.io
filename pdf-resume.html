@@ -7,155 +7,236 @@ layout: none
     <meta charset="UTF-8">
     <title>Bharathiraja Muthurajan - Resume</title>
     <style>
+        @page { size: A4; margin: 1.2cm; }
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #000;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #222;
             margin: 0;
-            padding: 40px;
+            background: #fff;
         }
         .container {
-            max-width: 1000px;
+            max-width: 980px;
             margin: 0 auto;
+            padding: 0;
         }
         .header {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .header h2 {
-            margin: 5px 0;
-            font-size: 20px;
-            color: #444;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-        }
-        .section {
-            margin-bottom: 25px;
-        }
-        h3 {
-            font-size: 18px;
-            border-bottom: 1px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
+            margin-top: 16px;
             margin-bottom: 8px;
         }
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        .experience-item h4 {
+        .header h1 {
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: 1px;
             margin: 0;
-            font-weight: bold;
         }
-        .experience-item .date {
+        .header h1 .bold {
+            font-weight: 600;
+        }
+        .header h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
             font-style: italic;
+            color: #444;
+        }
+        .contact {
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+        .contact a { color: #222; text-decoration: underline; }
+        .section-title {
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #bbb;
+            margin: 18px 0 10px 0;
+            padding-bottom: 2px;
+        }
+        .twocol {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 32px;
+        }
+        .leftcol {
+            font-size: 14px;
+        }
+        .leftcol h4 {
+            font-size: 13px;
+            font-weight: 700;
+            margin: 16px 0 4px 0;
+            letter-spacing: 0.5px;
+        }
+        .leftcol ul {
+            margin: 0 0 10px 0;
+            padding-left: 18px;
+        }
+        .leftcol li {
+            margin-bottom: 3px;
+        }
+        .education-block {
+            margin-bottom: 14px;
+        }
+        .education-block h5 {
+            margin: 0 0 2px 0;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .education-block .edudate {
+            font-size: 12px;
             color: #666;
+            margin-bottom: 2px;
         }
-        @media print {
-            body { margin: 0; padding: 20px; }
-            .container { max-width: 100%; }
+        .rightcol {
+            font-size: 14px;
         }
+        .summary {
+            margin-bottom: 18px;
+            font-size: 14px;
+            text-align: justify;
+        }
+        .exp-block {
+            margin-bottom: 18px;
+        }
+        .exp-block h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0 0 2px 0;
+        }
+        .exp-block .expdate {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 2px;
+        }
+        .exp-block ul {
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+        .exp-block li {
+            margin-bottom: 4px;
+        }
+        .cert-list {
+            font-size: 13px;
+            margin: 0;
+            padding-left: 18px;
+        }
+        .cert-list li {
+            margin-bottom: 4px;
+        }
+        a { color: #222; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Bharathiraja Muthurajan</h1>
+            <h1>
+                Bharathiraja <span class="bold">Muthurajan</span>
+            </h1>
             <h2>Data Analyst</h2>
         </div>
-        
-        <div class="contact-info">
-            +91-875-4988-874 | <a href="https://linkedin.com/in/bharathirajam">linkedin.com/in/bharathirajam</a> | 
-            <a href="https://github.com/brtrj">github.com/brtrj</a> | <a href="https://scholar.google.com/bharathirajam">scholar.google.com/bharathirajam</a><br>
-            <a href="https://bharathirajam.com">bharathirajam.com</a> | bharathiraja.m@outlook.com
+        <div class="contact">
+            +91-875-4988-874 |
+            <a href="https://linkedin.com/in/bharathirajam">linkedin.com/in/bharathirajam</a> |
+            <a href="https://github.com/brtrj">github.com/brtrj</a> |
+            <a href="https://scholar.google.com/bharathirajam">scholar.google.com/bharathirajam</a><br>
+            <a href="https://bharathirajam.com">bharathirajam.com</a> |
+            bharathiraja.m@outlook.com
         </div>
-
-        <div class="main-content">
-            <div class="left-column">
-                <div class="section">
-                    <h3>SKILLS</h3>
-                    <h4>LANGUAGES</h4>
+        <div class="section-title">PROFESSIONAL SUMMARY</div>
+        <div class="summary">
+            Certified data analyst with more than five years of experience as a researcher in India's top-ranking education institute. Comprehensive knowledge of building data analytics pipelines on on-premise and cloud platforms for real-time descriptive and predictive analytics. Experience includes programming languages like SQL and python and analytics business intelligence tools like Tableau and Power BI. Project management experience collaborating across IT services companies and research labs to deliver on-time and industry-compatible research outputs.
+        </div>
+        <div class="twocol">
+            <div class="leftcol">
+                <div class="section-title">SKILLS</div>
+                <h4>LANGUAGES</h4>
+                <ul>
+                    <li>SQL (MySQL)</li>
+                    <li>Python (PySpark 3.x)</li>
+                    <li>R</li>
+                    <li>Markdown</li>
+                </ul>
+                <h4>DEVELOPER</h4>
+                <ul>
+                    <li>Git</li>
+                    <li>Linux shell</li>
+                    <li>Jupyter notebook</li>
+                    <li>Visual Studio Code</li>
+                    <li>Amazon Web Services</li>
+                    <li>Microsoft Azure</li>
+                </ul>
+                <h4>ANALYTICS & BI</h4>
+                <ul>
+                    <li>Microsoft Excel</li>
+                    <li>Microsoft Power BI</li>
+                    <li>Tableau Desktop</li>
+                </ul>
+                <div class="section-title">EDUCATION</div>
+                <div class="education-block">
+                    <h5>IIT MADRAS</h5>
+                    <div class="edudate">Graduate Studies | Apr 2022 | Chennai, India</div>
+                    Research in traffic state estimation and sensor development
                     <ul>
-                        <li>SQL (MySQL)</li>
-                        <li>Python (PySpark 3.x)</li>
-                        <li>R</li>
-                        <li>Markdown</li>
-                    </ul>
-
-                    <h4>DEVELOPER</h4>
-                    <ul>
-                        <li>Git</li>
-                        <li>Linux shell</li>
-                        <li>Jupyter notebook</li>
-                        <li>Visual Studio Code</li>
-                        <li>Amazon Web Services</li>
-                        <li>Microsoft Azure</li>
-                    </ul>
-
-                    <h4>ANALYTICS & BI</h4>
-                    <ul>
-                        <li>Microsoft Excel</li>
-                        <li>Microsoft Power BI</li>
-                        <li>Tableau Desktop</li>
+                        <li>Data Science</li>
+                        <li>Image processing</li>
+                        <li>Real-time traffic data</li>
                     </ul>
                 </div>
-
-                <div class="section">
-                    <h3>CERTIFICATIONS</h3>
+                <div class="education-block">
+                    <h5>FH TECHNIKUM WIEN</h5>
+                    <div class="edudate">Master of Science | Jul 2016 | Vienna, Austria</div>
+                    Intelligent Transportation Systems
                     <ul>
-                        <li>Tableau Certified Data Analyst, Aug 2024</li>
-                        <li>Power BI Data Analyst Associate, Dec 2023</li>
-                        <li>Google Data Analytics Certificate, Nov 2023</li>
-                        <li>Databricks Certified Associate Developer for Apache Spark 3.0, Sep 2024</li>
-                        <li>AWS Certified Developer - Associate, Dec 2025</li>
+                        <li>Data Analysis</li>
+                        <li>Sensor development</li>
                     </ul>
+                </div>
+                <div class="education-block">
+                    <h5>UNIVERSITY OF ST ANDREWS</h5>
+                    <div class="edudate">PG Diploma | Nov 2013 | St Andrews, Scotland</div>
+                    Networks and Distributed Systems
+                    <ul>
+                        <li>Cloud computing</li>
+                        <li>Programming</li>
+                    </ul>
+                </div>
+                <div class="education-block">
+                    <h5>VCET</h5>
+                    <div class="edudate">Bachelors in Engineering | Jun 2012 | Madurai, India</div>
+                    Electronics and communication
                 </div>
             </div>
-
-            <div class="right-column">
-                <div class="section">
-                    <h3>PROFESSIONAL SUMMARY</h3>
-                    <p>{{ page.summary }}</p>
+            <div class="rightcol">
+                <div class="section-title">EXPERIENCE</div>
+                <div class="exp-block">
+                    <h4>DATA ANALYST (RESEARCH SCHOLAR) | IITM</h4>
+                    <div class="expdate">Aug 2016 – Apr 2022 | Chennai, India</div>
+                    <ul>
+                        <li>Published 6 peer-reviewed journal articles on the analysis of traffic sensor data using descriptive and predictive analytic tools Tableau, SQL, and Python</li>
+                        <li>Developed 2 traffic scanners using Wi-Fi and LiDAR sensor technology with Linux OS and Python</li>
+                        <li>Designed and developed data analytics pipelines for in-house traffic sensors with batch and stream processing using Spark, Microsoft Azure services, and reporting using Tableau</li>
+                        <li>Migrated previous generation sensor data pipeline consisting of over 400 devices from on-premise to AWS cloud infrastructure improving sensor operation reliability by more than 15%</li>
+                        <li>Operated as the point of contact for 2 industry funded projects, coordinating deliverables across 2 research labs, and 9 scholars with on-time project closure</li>
+                        <li>Managed 8 field technicians in the maintenance of a total of 590+ traffic sensors, provided them with operational dashboards, and created performance incentives. Also provided stakeholder faculties with strategic dashboards for tracking data volume and sensor performance using SQL and Tableau</li>
+                        <li>Implemented continuous monitoring of lab developed sensors using operational dashboards and reports using Power BI, providing bug fixes and performance upgrades, improving sensor capture performance by 60%</li>
+                        <li>Spearheaded the successful retrieval of 240 transit vehicle location sensors within 6 months and overhauled sensor maintenance procedure</li>
+                        <li>Mentored 4 technical project staff and undergraduate researchers on traffic data analysis projects and won a best paper award in collaboration</li>
+                        <li>Devised 2 image processing software for vehicle trajectory tracking and counting using Python, published the analysis in 2 peer-reviewed journals</li>
+                        <li>Orchestrated international data collection project in-person in India and United States in collaboration with Iowa State University</li>
+                        <li>Collected 30 days of naturalistic pedestrian behavior data in collaboration with Austrian road safety board, used in Vienna road safety evaluation</li>
+                        <li>Completed coursework and comprehensive exam toward a doctoral program</li>
+                    </ul>
                 </div>
-
-                <div class="section">
-                    <h3>EXPERIENCE</h3>
-                    {{ content }}
-                </div>
-
-                <div class="section">
-                    <h3>EDUCATION</h3>
-                    <div class="education-item">
-                        <h4>IIT MADRAS | Graduate Studies</h4>
-                        <div class="date">Apr 2022 | Chennai, India</div>
-                        <p>Research in traffic state estimation and sensor development</p>
-                        <ul>
-                            <li>Data Science</li>
-                            <li>Image processing</li>
-                            <li>Real-time traffic data</li>
-                        </ul>
-                    </div>
-                    <!-- ...remaining education items... -->
-                </div>
+                <div class="section-title">CERTIFICATIONS</div>
+                <ul class="cert-list">
+                    <li>Tableau Certified Data Analyst, Aug 2024</li>
+                    <li>Power BI Data Analyst Associate, Dec 2023</li>
+                    <li>Google Data Analytics Certificate, Nov 2023</li>
+                    <li>Databricks Certified Associate Developer for Apache Spark 3.0, Sep 2024</li>
+                    <li>AWS Certified Developer - Associate, Dec 2025</li>
+                </ul>
             </div>
         </div>
     </div>
