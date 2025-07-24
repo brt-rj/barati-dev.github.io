@@ -24,7 +24,10 @@ const path = require('path');
       deviceScaleFactor: 2
     });
 
-    const htmlPath = path.join(process.cwd(), '_site', 'pdf-resume.html');
+    // Change this:
+    // const htmlPath = path.join(process.cwd(), '_site', 'pdf-resume.html');
+    // To this:
+    const htmlPath = path.join(process.cwd(), '_site', 'pdf-resume', 'index.html');
     console.log('Loading resume from:', htmlPath);
     
     await page.goto(`file://${htmlPath}`, {
