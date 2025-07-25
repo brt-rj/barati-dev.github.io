@@ -573,6 +573,35 @@ ul li::before {
   }
 }
 
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill-btn {
+    background: $primary-accent;
+    color: $surface-color;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5em 1.2em;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px $shadow-color;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+        background: $primary-accent-light;
+        color: $bg-color;
+        box-shadow: 0 4px 12px $shadow-color;
+        text-decoration: none;
+    }
+}
+
 .dashboard-container {
   width: 100%;
   margin: 0 auto;
